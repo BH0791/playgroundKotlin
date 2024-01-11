@@ -6,7 +6,7 @@ fun main() {
 
 }
 private fun lesTableaux(){
-    val numbers = arrayOf(10, 20, 30, 40, 50)
+    val numbers = arrayOf("Sylvie", "Ludovic", "Paul", "Jean")
     println(numbers[0])
 }
 fun myfun(a: Int, b: Int): Int{
