@@ -1,15 +1,34 @@
 package fr.hamtec
 
 fun main() {
-    println("TP-KOTLIN")
+    println("********** TP-KOTLIN **********")
     //lesVariable()
     //lesTableaux()
-    lesTableauxEtLesFonctions()
+    //lesTableauxEtLesFonctions()
+    lesTableauxDePrimitives()
 }
+
+fun lesTableauxDePrimitives() {
+    //-Tableau vide de 5 entiers
+    val numbers1 = intArrayOf(5)
+    //-Tableau qui contiendra cinq entiers
+    val numbers = intArrayOf(9, 8, 7, 6, 5, 4, 3, 2, 1)
+    displayNumbers(numbers)
+    // Ou
+    //displayNumbers(intArrayOf(9, 8, 7, 6, 5, 4, 3, 2, 1))
+}
+
 fun displayNames(names: Array<String>){
     //-Avec la V3
     for (name in names){
         println(name)
+    }
+}
+fun displayNumbers(numbers: IntArray){
+    //-Que pour les primitives
+    //-Avec la V3
+    for (name in numbers){
+        print(name)
     }
 }
 private fun lesTableauxEtLesFonctions(){
