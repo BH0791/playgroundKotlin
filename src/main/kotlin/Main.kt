@@ -2,12 +2,28 @@ package fr.hamtec
 
 fun main() {
 
+    //lesVariable()
     lesTableaux()
 
 }
+
+
 private fun lesTableaux(){
-    val numbers = arrayOf("Sylvie", "Ludovic", "Paul", "Jean")
-    println(numbers[0])
+    val names = arrayOf("Sylvie", "Ludovic", "Paul", "Jean")
+    val indice = names[2]
+    println(names[0] + " $indice")
+
+    for (index in 0..names.size-1){
+        print(names[index])
+    }
+    println()
+    for (index in names.indices){
+        print(names[index])
+    }
+    println()
+    for (name in names){
+        print(name)
+    }
 }
 fun myfun(a: Int, b: Int): Int{
     return a + b
