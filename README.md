@@ -1,6 +1,8 @@
 # playgroundKotlin
 
-Apprendre le langage de programmation Kotlin
+Apprendre le langage de programmation Kotlin *Ce n'est pas un cours!*
 
-jour-1
 - Manipuler les variables
+- Les structures de contrôle
+- Les fonctions
+- Les tableaux
