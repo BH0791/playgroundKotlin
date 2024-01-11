@@ -5,7 +5,24 @@ fun main() {
     //lesVariable()
     //lesTableaux()
     //lesTableauxEtLesFonctions()
-    lesTableauxDePrimitives()
+    //lesTableauxDePrimitives()
+
+    val labrador = Dog()
+    labrador.name = "Doggo"
+    labrador.weight = 12.5f
+    labrador.age = 4
+    labrador.color = "brown"
+    labrador.race = "Labrador"
+    labrador.size = 180
+    labrador.position = 's'
+
+    labrador.bark()
+    println(labrador.weight)
+    labrador.eat(100)
+    println(labrador.weight)
+    labrador.run(20000)
+    println(labrador.weight)
+    println(labrador)
 }
 
 fun lesTableauxDePrimitives() {
