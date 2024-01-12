@@ -11,7 +11,7 @@ class Dog {
             if (value > 0){
                 field = value + 100
             }else{
-                println("Impossible!!!!!!!!!!!!!!!")
+                println("Impossible!")
             }
         }
     var race = ""
