@@ -8,3 +8,4 @@ since: 10-01-2024
 - Les structures de contrôle
 - Les fonctions
 - Les tableaux
+- Les classes
