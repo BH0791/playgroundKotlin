@@ -10,19 +10,25 @@ fun main() {
     val labrador = Dog()
     labrador.name = "Doggo"
     labrador.weight = 12.5f
-    labrador.age = 4
+    //labrador.age = 4
+    //labrador.setAge(4)
     labrador.color = "brown"
     labrador.race = "Labrador"
     labrador.size = 180
     labrador.position = 's'
 
-    labrador.bark()
-    println(labrador.weight)
-    labrador.eat(100)
-    println(labrador.weight)
-    labrador.run(20000)
-    println(labrador.weight)
-    println(labrador)
+    //labrador.bark()
+//    println(labrador.weight)
+//    labrador.eat(100)
+//    println(labrador.weight)
+//    labrador.run(20000)
+//    println(labrador.weight)
+//    println(labrador)
+
+    labrador.age = 5
+
+    //labrador.setAge(-5)
+    println(labrador.age)
 }
 
 fun lesTableauxDePrimitives() {
