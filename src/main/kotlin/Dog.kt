@@ -1,25 +1,31 @@
 package fr.hamtec
 
-class Dog {
-    var name = ""
-    var age: Int = 0
+// ! Avec constructeur primaire
+class Dog(age: Int, var name: String, var race: String, var color: String, var size: Int, private var weight: Float, var position: Char = 't') {
+    // ? Constructeur secondaire
+    constructor(name: String): this(1, name,"inconnue", "inconnue", 0, 0f)
+
+    var age: Int = if (age > 0) age else 0
         get() {
             return field
         }
 
         set(value: Int){
             if (value > 0){
-                field = value + 100
+                field = value
             }else{
                 println("Impossible!")
             }
         }
-    var race = ""
-    var color = ""
-    var size = 0
-    var weight = 0f
-    var position = 't'
 
+    init {
+        println("Fixer l'âge à la valeur : $age")
+        this.age = age
+        println("Fixer le nom à la valeur : $name")
+        this.name = name
+        println("Fixer la race à la valeur : $race")
+        this.race = race
+    }
     private fun bark(): Unit{
         // bark = aboiement
         println("Woof! Woof!")
@@ -38,8 +44,9 @@ class Dog {
     }
 
     override fun toString(): String {
-        return "Dog(name='$name', age=$age, race='$race', color='$color', size=$size, weight=$weight, position=$position)"
+        return "Dog(name='$name', race='$race', color='$color', size=$size, weight=$weight, position=$position, age=$age)"
     }
+
     //-mutateur - setter
     //-Dans Kotlin, une propriété ne nécessite pas de méthodes getter ou setter explicites
 
