@@ -1,10 +1,17 @@
 package fr.hamtec
 
 import javax.swing.text.Position
-
-class Dog constructor( var name : String, age: Int, var race: String, var color: String, size: Int, var weight: Float, var position : Char  ) {
+//+ Class avec un constructeur primaire et le mots clé constructor qui est facultatife
+class Dog constructor(
+    var name : String,
+    age : Int,
+    var race : String,
+    val color : String,
+    var size : Int,
+    private var weight : Float,
+    var position : Char = 't'
+) {
     //? Attributs
-    //var name = name
     //! Pas d'initialisation dans le constructeur pour avoir un contrôle sur age, ici getters/setters
     var age = age
         get() {
@@ -17,15 +24,18 @@ class Dog constructor( var name : String, age: Int, var race: String, var color:
                 println("Vas-te faire...! Pas de changement avec la valeur: $value")
             }
         }
+
+    //    var name = name
 //    var race = race
 //    var color = color
 //    var size = size
 //    var weight = weight
 //    var position = position
-init {
-    println("Attention l'age ne peut-être négative à la construction il est a $age an(s) ==>> " + this.age + " ans.")
-    this.age = age
-}
+    init {
+        println("Attention l'age ne peut-être négative à la construction il est a $age an(s) ==>> " + this.age + " ans.")
+        this.age = age
+    }
+
     //* Méthode setAge()
 //    fun setAge(newAge: Int){
 //        if ( newAge > 0 ){

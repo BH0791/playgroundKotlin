@@ -6,7 +6,7 @@ fun main() {
 
 }
 private fun utilObjMethode(){
-    var labrador = Dog("Doggo", 4, "labrador", "brown", 180, 12.5f, 's')
+    var labrador = Dog("Doggo", 4, "labrador", "brown", 180, 12.5f)
     println(labrador)
 
     labrador.age = 10
