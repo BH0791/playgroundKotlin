@@ -4,12 +4,30 @@ class Dog {
     //? Attributs
     var name = ""
     var age = 0
+        get() {
+            return field * 7
+        }
+        set( value ){
+            if( value > 0 ){
+                field = value
+            }else{
+                println("Vas-te faire...!")
+            }
+        }
     var race = ""
     var color = ""
     var size = 0
     var weight = 0f
     var position = 't'
 
+    //* Méthode setAge()
+//    fun setAge(newAge: Int){
+//        if ( newAge > 0 ){
+//            age = newAge
+//        }else{
+//            println("Impossible!")
+//        }
+//    }
     //? Méthodes
     private fun back(): Unit{
         println("Woof! Woof!")

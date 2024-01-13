@@ -2,30 +2,37 @@ package fr.hamtec
 
 fun main() {
     println("\n********** TP-KOTLIN **********")
-    utiliserObjet()
+    utilObjMethode()
 
 }
+private fun utilObjMethode(){
+    var labrador = Dog()
+    labrador.age = 10
+    println(labrador.age)
 
+    labrador.age = -5
+    println(labrador.age)
+}
 fun utiliserObjet() {
     var labrador = Dog()
 //? Attributs
-    labrador.name = "Doggo"
-    labrador.weight = 12.5f
-    labrador.age = 4
-    labrador.color = "brown"
-    labrador.race = "labrador"
-    labrador.size = 180
-    labrador.position = 's'
+//    labrador.name = "Doggo"
+//    labrador.weight = 12.5f
+//    labrador.age = 4
+//    labrador.color = "brown"
+//    labrador.race = "labrador"
+//    labrador.size = 180
+//    labrador.position = 's'
 //? Méthodes
     //labrador.back()
-    println(labrador.weight)
-    labrador.eat(100)
-    println(labrador.weight)
-    labrador.run(2000)
-    println(labrador.weight)
-    println()
+//    println(labrador.weight)
+//    labrador.eat(100)
+//    println(labrador.weight)
+//    labrador.run(2000)
+//    println(labrador.weight)
+//    println()
 //! Affichage
-    println( labrador )
+//    println( labrador )
 }
 
 fun lesTableauxDePrimitives() {
