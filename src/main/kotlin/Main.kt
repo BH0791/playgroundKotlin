@@ -2,26 +2,8 @@ package fr.hamtec
 
 fun main() {
     println("\n********** TP-KOTLIN **********")
-    //lesVariable()
-    //lesTableaux()
-    //lesTableauxEtLesFonctions()
-    //lesTableauxDePrimitives()
 
-//    val labrador = Dog(4, "Doggo", "labrador", "brown", 180, 12.5f)
-//    val chiouaoua = Dog("chiouaoua")
 
-//    println(labrador)
-//    println(chiouaoua)
-//    chiouaoua.age = 5
-//    println(chiouaoua)
-    val jean = Personne("Bichon     ", "Jean-Luc", 2019)
-    val momo = Personne(dateNaissance = 1980)
-    val kot = Personne("kadja", "Mondéo")
-    println(jean)
-    println()
-    println(momo)
-    println()
-    println(kot)
 }
 
 fun lesTableauxDePrimitives() {
