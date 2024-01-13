@@ -2,8 +2,30 @@ package fr.hamtec
 
 fun main() {
     println("\n********** TP-KOTLIN **********")
+    utiliserObjet()
 
+}
 
+fun utiliserObjet() {
+    var labrador = Dog()
+//? Attributs
+    labrador.name = "Doggo"
+    labrador.weight = 12.5f
+    labrador.age = 4
+    labrador.color = "brown"
+    labrador.race = "labrador"
+    labrador.size = 180
+    labrador.position = 's'
+//? Méthodes
+    //labrador.back()
+    println(labrador.weight)
+    labrador.eat(100)
+    println(labrador.weight)
+    labrador.run(2000)
+    println(labrador.weight)
+    println()
+//! Affichage
+    println( labrador )
 }
 
 fun lesTableauxDePrimitives() {
@@ -16,23 +38,26 @@ fun lesTableauxDePrimitives() {
     //displayNumbers(intArrayOf(9, 8, 7, 6, 5, 4, 3, 2, 1))
 }
 
-fun displayNames(names: Array<String>){
+fun displayNames(names : Array<String>) {
     //-Avec la V3
-    for (name in names){
+    for (name in names) {
         println(name)
     }
 }
-fun displayNumbers(numbers: IntArray){
+
+fun displayNumbers(numbers : IntArray) {
     //-Que pour les primitives
     //-Avec la V3
-    for (name in numbers){
+    for (name in numbers) {
         print(name)
     }
 }
-private fun lesTableauxEtLesFonctions(){
+
+private fun lesTableauxEtLesFonctions() {
     val names = arrayOf("Sylvie", "Ludovic", "Paul", "Jean")
     displayNames(names)
 }
+
 private fun lesTableaux() {
     val names = arrayOf("Sylvie", "Ludovic", "Paul", "Jean")
     val indice = names[2]
@@ -53,19 +78,19 @@ private fun lesTableaux() {
     }
 }
 
-fun myfun(a: Int, b: Int): Int {
+fun myfun(a : Int, b : Int) : Int {
     return a + b
 }
 
-private fun minOf(a: Int, b: Int): Int {
+private fun minOf(a : Int, b : Int) : Int {
     return if (a < b) a else b
 }
 
 fun lesVariable() {
 
 
-    val immutableString: String = "Hello" /* Immutable variable */
-    var mutableInt: Int = 42 /* Mutable variable */
+    val immutableString : String = "Hello" /* Immutable variable */
+    var mutableInt : Int = 42 /* Mutable variable */
     val inferredType = 42 // Int inferred
     println(immutableString)
 
