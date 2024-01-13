@@ -1,25 +1,31 @@
 package fr.hamtec
 
-class Dog {
+import javax.swing.text.Position
+
+class Dog constructor( var name : String, age: Int, var race: String, var color: String, size: Int, var weight: Float, var position : Char  ) {
     //? Attributs
-    var name = ""
-    var age = 0
+    //var name = name
+    //! Pas d'initialisation dans le constructeur pour avoir un contrôle sur age, ici getters/setters
+    var age = age
         get() {
             return field * 7
         }
-        set( value ){
-            if( value > 0 ){
+        set(value) {
+            if (value > 0) {
                 field = value
-            }else{
-                println("Vas-te faire...!")
+            } else {
+                println("Vas-te faire...! Pas de changement avec la valeur: $value")
             }
         }
-    var race = ""
-    var color = ""
-    var size = 0
-    var weight = 0f
-    var position = 't'
-
+//    var race = race
+//    var color = color
+//    var size = size
+//    var weight = weight
+//    var position = position
+init {
+    println("Attention l'age ne peut-être négative à la construction il est a $age an(s) ==>> " + this.age + " ans.")
+    this.age = age
+}
     //* Méthode setAge()
 //    fun setAge(newAge: Int){
 //        if ( newAge > 0 ){
@@ -29,18 +35,20 @@ class Dog {
 //        }
 //    }
     //? Méthodes
-    private fun back(): Unit{
+    private fun back() : Unit {
         println("Woof! Woof!")
     }
-    fun isSitting(): Boolean = position == 's'
-    fun isLaying(): Boolean = position == 'l'
-    fun isStanding(): Boolean = position == 't'
-    fun eat(foodWeight: Int){
+
+    fun isSitting() : Boolean = position == 's'
+    fun isLaying() : Boolean = position == 'l'
+    fun isStanding() : Boolean = position == 't'
+    fun eat(foodWeight : Int) {
         back()
         weight += (foodWeight / 1000f)
 
     }
-    fun run(distance: Int){
+
+    fun run(distance : Int) {
         weight -= (distance / 1000f) / 1000
     }
 
