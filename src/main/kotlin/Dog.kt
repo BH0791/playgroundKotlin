@@ -6,11 +6,14 @@ class Dog constructor(
     var name : String,
     age : Int,
     var race : String,
-    val color : String,
+    var color : String,
     var size : Int,
     private var weight : Float,
     var position : Char = 't'
 ) {
+    //+ Constructeur secondaire
+    constructor(name : String) : this("unknown", 1, "unknown", "unknown", 0, 0f, 't') {
+    }
     //? Attributs
     //! Pas d'initialisation dans le constructeur pour avoir un contrôle sur age, ici getters/setters
     var age = age

@@ -8,12 +8,13 @@ fun main() {
 private fun utilObjMethode(){
     var labrador = Dog("Doggo", 4, "labrador", "brown", 180, 12.5f)
     println(labrador)
-
     labrador.age = 10
     println(labrador)
-
     labrador.age = -5
     println(labrador)
+    println()
+    val chiouaoua = Dog("Choupinette")
+    println(chiouaoua)
 }
 fun utiliserObjet() {
 //    var labrador = Dog()
