@@ -2,19 +2,27 @@ package fr.hamtec
 
 fun main() {
     println("\n********** TP-KOTLIN **********")
-    utilObjMethode()
+    utilObjheritage()
 
 }
+
+fun utilObjheritage() {
+    val chien = Dog(4, "Doggo", "labrador", "brown",180, 15.2f, 's')
+    val chat = Cat(2, "Kitti", "Persan", "grey", 37, 6.21f)
+    println(chien)
+    println(chat)
+}
+
 private fun utilObjMethode(){
-    var labrador = Dog("Doggo", 4, "labrador", "brown", 180, 12.5f)
-    println(labrador)
-    labrador.age = 10
-    println(labrador)
-    labrador.age = -5
-    println(labrador)
-    println()
-    val chiouaoua = Dog("Choupinette")
-    println(chiouaoua)
+//    var labrador = DogLesClassesP101("Doggo", 4, "labrador", "brown", 180, 12.5f)
+//    println(labrador)
+//    labrador.age = 10
+//    println(labrador)
+//    labrador.age = -5
+//    println(labrador)
+//    println()
+//    val chiouaoua = DogLesClassesP101("Choupinette")
+//    println(chiouaoua)
 }
 fun utiliserObjet() {
 //    var labrador = Dog()
