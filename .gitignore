@@ -40,3 +40,4 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/lesClasses/src/main/kotlin/fr/hamtec/chapitre_2_2/Main.kt
