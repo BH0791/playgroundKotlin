@@ -1,11 +1,12 @@
 package fr.hamtec.chapitre_2_2
 
 /**
- *
+ *   Mammifère (canidé) carnivore aux multiples races, caractérisé par sa facilité à être domestiqué, par une course rapide, un excellent odorat et par son cri spécifique, l'aboiement.
  */
-class Dog {
-    var name = "-"
-    var age = 0
+class Dog(var name: String, age: Int, var race: String, var color: String, var size: Int, var weight: Float, var position: Char = 't') {
+    constructor(name: String): this(name, 0,"unknown", "unknown", 0, 0f )
+    constructor(): this("unknown", 0, "unknown", "unknown", 0, 0f)
+    var age = age
         get() = field * 7
         set(value){
             if ( value > 0){
@@ -14,11 +15,6 @@ class Dog {
                 println("Valeur $value incorrect")
             }
         }
-    var race: String = "-"   //! Ecriture pas simplifier
-    var color = "-"
-    var size = 0
-    var weight = 0f
-    var position = 't'
 
     /**
      * Faire aboyer le chien
@@ -40,6 +36,6 @@ class Dog {
         weight -= (distance / 1000f) / 100
     }
     override fun toString(): String {
-        return "Dog(\nname = $name \nrace = $race \ncolor=$color \nsize=$size \nweight = $weight \nposition = $position \nage = $age\n)"
+        return "Dog(\nname = $name \nrace = $race \ncolor=$color \nsize = $size \nweight = $weight \nposition = $position \nage = $age\n)"
     }
 }
