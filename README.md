@@ -16,4 +16,5 @@ since: 10-01-2024
 # Informations
 
 
-[Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/)
+[Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/)<br>
+[Getters and setters](https://kotlinlang.org/docs/properties.html#declaring-properties)
