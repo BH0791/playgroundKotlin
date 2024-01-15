@@ -3,10 +3,15 @@ package fr.hamtec.chapitre_2_2
 fun main() {
     heart()
     val labradore = Dog()
+
+    labradore.age = 10
     println(labradore)
+
+    labradore.bark()
+
+    labradore.age = -5
+    //println(labradore)
 }
-
-
 
 
 
