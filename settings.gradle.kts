@@ -3,3 +3,4 @@ plugins {
 }
 rootProject.name = "playgroundKotlin"
 include("lesClasses")
+include("heritahe")
