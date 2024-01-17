@@ -8,11 +8,11 @@ open class Animal(
     var size: Int,
     protected var weight: Float
 ) {
-    fun eat(foodWeight: Int) {
+    open fun eat(foodWeight: Int) {
         weight += (foodWeight / 100f)
     }
 
-    fun run(distance: Int) {
+    open fun run(distance: Int) {
         weight -= (distance / 1000f) / 1000
     }
 
