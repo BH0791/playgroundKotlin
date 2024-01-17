@@ -1,6 +1,6 @@
 package fr.hamtec.chapitre2_3
 
-open class Animal( var age: Int, var name: String, var race: String, var color: String, var size: Int, var weight: Float ) {
+open class Animal(var age: Int, var name: String, var race: String, var color: String, var size: Int, protected var weight: Float ) {
     fun eat( foodWeight: Int ){
         weight += ( foodWeight / 100f )
     }
