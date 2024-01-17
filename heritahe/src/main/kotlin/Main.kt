@@ -8,16 +8,20 @@ fun main() {
     println(dog)
     println(cat)
 
-    dog.eat(100)
-    cat.eat(100)
+    println()   // ligne en plus
+    eatAnimal(dog)
+    eatAnimal(cat)
 
     println(dog)
     println(cat)
 
     dog.bark()
     cat.meow()
-}
 
+}
+fun eatAnimal(animal: Animal){
+    animal.eat(100)
+}
 private fun heart() {
     println()
     println("******************************************************************")
