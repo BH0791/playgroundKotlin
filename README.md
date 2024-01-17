@@ -11,6 +11,9 @@ since: 10-01-2024
 - Les fonctions
 - Les tableaux
 - Les classes 
+- L'héritage
+- La covariance
+- Le polymorphisme
 
 
 # Informations
