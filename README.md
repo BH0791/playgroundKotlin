@@ -14,7 +14,7 @@ since: 10-01-2024
 - L'héritage
 - La covariance
 - Le polymorphisme
-- - suite
+- Les classes abstraires
 
 
 # Informations
