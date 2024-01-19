@@ -12,4 +12,7 @@ class Dog(age: Int, name: String, race: String, color: String, size: Int, weight
      * Calcul l'IMC (indice de masse corporelle)
      */
     fun isTooBig(): Boolean = (weight / (size / 100.0).pow(2)) > 25
+    override fun eat(foodWeight: Int) {
+        weight += (foodWeight / 100f)
+    }
 }

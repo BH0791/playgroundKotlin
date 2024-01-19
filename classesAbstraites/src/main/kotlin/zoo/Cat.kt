@@ -8,13 +8,8 @@ class Cat(age: Int, name: String, race: String, color: String, size: Int, weight
     fun meow() {
         println("Meow! Meow!")
     }
-
-    override fun run(distance: Int) {
-        super.run(distance)
-    }
     override fun eat(foodWeight: Int) {
-        super.eat(foodWeight)
-        //run(500)
+        weight += (foodWeight / 100f)
     }
 
 }

@@ -1,6 +1,6 @@
 package zoo
 
-open class Animal(
+abstract class Animal(
     var age: Int,
     var name: String,
     var race: String,
@@ -8,9 +8,10 @@ open class Animal(
     var size: Int,
     protected var weight: Float
 ) {
-    open fun eat(foodWeight: Int) {
-        weight += (foodWeight / 100f)
-    }
+    /**
+     * Faire manger un animal
+     */
+    abstract fun eat(foodWeight: Int)
 
     open fun run(distance: Int) {
         weight -= (distance / 1000f) / 1000
