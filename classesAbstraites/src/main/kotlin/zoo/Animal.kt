@@ -13,9 +13,7 @@ abstract class Animal(
      */
     abstract fun eat(foodWeight: Int)
 
-    open fun run(distance: Int) {
-        weight -= (distance / 1000f) / 1000
-    }
+    abstract fun run(distance: Int)
 
     override fun toString(): String {
         return "Animal(age = $age, name = $name, race = $race, color = $color, size=$size, weight=$weight)"

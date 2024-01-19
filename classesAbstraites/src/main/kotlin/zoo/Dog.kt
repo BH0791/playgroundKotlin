@@ -15,4 +15,8 @@ class Dog(age: Int, name: String, race: String, color: String, size: Int, weight
     override fun eat(foodWeight: Int) {
         weight += (foodWeight / 100f)
     }
+
+    override fun run(distance: Int) {
+        weight -= (distance / 1000f) / 1000
+    }
 }

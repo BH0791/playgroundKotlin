@@ -12,4 +12,8 @@ class Cat(age: Int, name: String, race: String, color: String, size: Int, weight
         weight += (foodWeight / 100f)
     }
 
+    override fun run(distance: Int) {
+        weight -= (distance / 1000f) / 1000
+    }
+
 }
