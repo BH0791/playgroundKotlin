@@ -9,5 +9,9 @@ class ComputerNested(val graphicCard: GraphicCard, val hardDisk: HardDisk) {
     }
     class HardDisk(val name: String, val size: Int)
 
+    override fun toString(): String {
+        return "ComputerNested(graphicCard=${graphicCard.name}, hardDisk=${hardDisk.name})"
+    }
+
 
 }
