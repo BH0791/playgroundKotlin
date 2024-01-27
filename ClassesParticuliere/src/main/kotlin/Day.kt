@@ -11,7 +11,7 @@ enum class Day {
 
     // custom properties with default values
     var dayOfWeek: Int? = null
-    var printableName : String? = null
+    var printableName: String? = null
 
     constructor()
 
@@ -28,3 +28,4 @@ enum class Day {
     fun customToString(): String {
         return "[${dayOfWeek}] -> $printableName"
     }
+}
