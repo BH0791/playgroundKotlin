@@ -2,7 +2,7 @@ package fr.hamtec
 
 fun main() {
     //* Entrée
-    //!
+    //! Ne fonctionne pas
     heart()
     val hello = { println("Hello") }
     hello()
@@ -39,5 +39,5 @@ inline fun doOperation(a: Int, b: Int, lambda: (Int, Int) -> Int) {
 }
 
 private fun heart() {
-    println("***+*** Hello Lambda! ***+***")
+    println("***+***+*** Hello Lambda! ***+***+***")
 }
