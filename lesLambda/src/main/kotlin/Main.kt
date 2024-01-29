@@ -1,7 +1,9 @@
 package fr.hamtec
 
 fun main() {
-
+    //* Entrée
+    //!
+    heart()
     val hello = { println("Hello") }
     hello()
     println()
@@ -37,5 +39,5 @@ inline fun doOperation(a: Int, b: Int, lambda: (Int, Int) -> Int) {
 }
 
 private fun heart() {
-    println("*** Hello Lambda! ***")
+    println("***+*** Hello Lambda! ***+***")
 }
