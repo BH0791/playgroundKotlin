@@ -2,12 +2,24 @@ package fr.hamtec
 
 fun main() {
     //* Entrée
-    //! Ne fonctionne pas
     heart()
+
+
+    println("++++Le type Nullable++++")
+    var dogi: Dog? = null
+    var dog: Dog
+
+    if (true/*condition*/) {
+        dogi = Dog("Doggo")
+    }
+    println(dogi)
+}
+
+fun exoLambda() {
     val hello = { println("Hello") }
     hello()
     println()
-    displayTexInLamda(){ hello() }
+    displayTexInLamda() { hello() }
     println()
     doOperation(5, 5, lambda = { a, b -> a * b })
     println()
