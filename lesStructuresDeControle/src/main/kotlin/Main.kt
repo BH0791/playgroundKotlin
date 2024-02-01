@@ -12,4 +12,13 @@ fun main() {
         is String -> println("Veuillez saisir l'âge das le bon format")
         else -> println("Ici c'est fini")
     }
+
+    val couleur = "vert"
+
+    val action = if(couleur == "rouge") "Arrêter"
+    else if (couleur == "vert") "Continuer"
+    else if (couleur == "jaune") "Ralentir"
+    else "Couleur incorect"
+
+    println(action)
 }
