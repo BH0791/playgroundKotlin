@@ -12,6 +12,7 @@ repositories {
 
 dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test")
+    dokkaPlugin("org.jetbrains.dokka:android-documentation-plugin:1.9.10")
 }
 
 tasks.test {

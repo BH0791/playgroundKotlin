@@ -1,9 +1,6 @@
 package fr.hamtec
-
 fun main() {
     //* Entrée
-    heart()
-
 
     println("++++Le type Nullable++++")
     var dogi: Dog? = null
