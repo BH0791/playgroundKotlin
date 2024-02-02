@@ -1,6 +1,6 @@
 package fr.hamtec
 
-class Eleve(nom: String, age: Int) : Personne(nom,age), ActionPersonne{
+class Eleve(nom: String, age: Int) : Personne(nom,age), ActionPersonne, Outils{
 constructor(nom: String) : this(nom, 100)
     var age = 0
         get() = field
