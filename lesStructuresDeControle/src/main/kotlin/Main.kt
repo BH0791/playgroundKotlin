@@ -2,6 +2,7 @@ package fr.hamtec
 
 fun main() {
     println("********** Les structures de contrôle **********")
+    println("https://www.youtube.com/watch?v=vhUMMYlPthU&list=PLT2KSPhMMiqroUEfg21lDO_AlOlADAfKC&index=2&ab_channel=DrcMind")
     //! Any => tous les types
     val age: Any = "14 ans"
 
