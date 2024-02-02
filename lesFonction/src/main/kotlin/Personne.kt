@@ -1,13 +1,14 @@
 package fr.hamtec
 
-open class Personne(nom: String, age: Int) {
+abstract class Personne(protected open var nom: String,  age: Int) {
     init {
-        println("Nom : $nom \nAge : $age")
+        println("\nNom : $nom \nAge : $age")
     }
-    open fun marcher(): Unit{
-        println("Personne: Je marche!")
-    }
-    open fun manger(){
-        println("Personne: Je mange!")
+    abstract fun marcher(): Unit
+    abstract fun manger(): Unit
+    fun faireUnTrouAvecUnOutil(outil: Int): Int {
+        var profondeur = 1_000_000
+        println("J'utilise $outil est la profondeur est de $profondeur m")
+        return profondeur
     }
 }
