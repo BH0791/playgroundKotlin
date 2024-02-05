@@ -8,3 +8,8 @@ interface Domestic{
     fun snuggle()
 }
 ```
+
+Les méthodes non abstraites<br>
+Les attributs abstraits<br>
+La covariance<br>
+Classes anonyme
