@@ -31,4 +31,5 @@ Mon programme...
 
 
 [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/)<br>
-[Getters and setters](https://kotlinlang.org/docs/properties.html#declaring-properties)
+[Getters and setters](https://kotlinlang.org/docs/properties.html#declaring-properties)<br>
+[Interfaces fonctionnelles (SAM)](https://kotlinlang.org/docs/fun-interfaces.html)
