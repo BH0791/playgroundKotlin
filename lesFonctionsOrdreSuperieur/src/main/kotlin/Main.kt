@@ -9,26 +9,36 @@ fun main() {
 //        println("b=$b")
 //        a * b})
 //    println(doOperation(2,2, ::caca))
+
     //! Evolution des fonctions d'ordre supèrieur
     val personne1 = Personne("Dupond", "Didier")
-
+//+ V1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//+ l'opérateur :: fait référence a une classe ou a une méthode
+//+ V1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     dePersonne(personne1,  ::recupererNom )
 
     dePersonne(personne1,  { recupererNom(personne1.prenom) } )
-
+//+ V1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     dePersonne(personne1, { nom ->
         val nomMajuscule = nom.uppercase()
         println("$nomMajuscule")
     })
+//+ V2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     dePersonne(personne1, {
         val nomMajuscule = it.uppercase()
         println("$nomMajuscule")
     })
+//+ V3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     dePersonne(personne1) {
         val nomMajuscule = it.uppercase()
         println("$nomMajuscule")
     }
+//+ Va ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     println(personne1.getNomComplet())
+//+ Vb ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    personne1.getNomComplet2{
+        println(it)
+    }
 }
 fun displayTextInLambda( lambda: () -> Unit ){
     println("\nBefor lambda")
@@ -55,5 +65,8 @@ data class Personne(val name: String, val prenom: String)
 //? Extention de la classe Personne
 
 fun Personne.getNomComplet(): String {
-    return "[${this.name}-${this.prenom}]"
+    return "va-[${this.name}-${this.prenom}]"
+}
+fun Personne.getNomComplet2(fn: (String) -> Unit){
+    fn("vb-[${this.name}-${this.prenom}]")
 }
