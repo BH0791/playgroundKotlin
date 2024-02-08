@@ -1,6 +1,6 @@
 # playgroundKotlin
 
-J'apprendre le langage de programmation Kotlin *Ce n'est pas un cours!*, je veux plus tard utilliser JetPack Compose pour des applications Android<br>
+J'apprends le langage de programmation Kotlin *Ce n'est pas un cours!*, je veux plus tard utilliser JetPack Compose pour des applications Android<br>
 
 *Java: JDK-21.0.2*<br>zulu21.32.17-ca-jdk21.0.2<br>*Kotlin: 1.9.22*<br>*Gradle-8.5*<br>*Android Studio Jellyfish | 2023.3.3 Canary 7||ou||IntelliJ IDEA 2023.3.2 (Community Edition)*<br>*pluging: Better Highlights*
 
