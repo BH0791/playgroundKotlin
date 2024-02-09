@@ -15,9 +15,9 @@ fun main() {
 //+ V1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //+ l'opérateur :: fait référence a une classe ou a une méthode
 //+ V1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    dePersonne(personne1,  ::recupererNom )
+    dePersonne(personne1, ::recupererNom)
 
-    dePersonne(personne1,  { recupererNom(personne1.prenom) } )
+    dePersonne(personne1, { recupererNom(personne1.prenom) })
 //+ V1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     dePersonne(personne1, { nom ->
         val nomMajuscule = nom.uppercase()
@@ -36,30 +36,45 @@ fun main() {
 //+ Va ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     println(personne1.getNomComplet())
 //+ Vb ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    personne1.getNomComplet2{
+    personne1.getNomComplet2 {
         println(it)
     }
+    println("----------------------------------------------------------------")
+    //? Appel de la fonction d'ordre supèrieur
+    dePersonne(personne1, { recupererNom(personne1.name) })
+
+    val resultat = { a: Int, b: Int -> "ba" }
+    println(resultat(5,8))
+    println({ a: Int, b: Int -> "ba" })
 }
-fun displayTextInLambda( lambda: () -> Unit ){
+
+fun displayTextInLambda(lambda: () -> Unit) {
     println("\nBefor lambda")
     lambda()
     println("After lambda")
 }
-fun doOperation(a: Int, b: Int, lambda: (Int, Int) -> Int){
+
+fun doOperation(a: Int, b: Int, lambda: (Int, Int) -> Int) {
     println("\nBefor lambda")
     val result = lambda(a, b)
     println("Result : $result")
 }
+
 fun caca(a: Int, b: Int): Int {
     return a + b
 }
-fun recupererNom(nom: String){
+
+//? Définition de la méthode que je vais donner a la fonction d'ordre supèrieur
+fun recupererNom(nom: String) {
     println(nom)
 }
-fun dePersonne(personne: Personne, fn: (String) -> Unit){
+
+//? Définition de la fonction d'ordre supèrieur
+fun dePersonne(personne: Personne, fn: (String) -> Unit) {
     fn(personne.name)
 }
 
+//? Classe qui va servir a la démonstration de la classe d'ordre supèrieur
 data class Personne(val name: String, val prenom: String)
 
 //? Extention de la classe Personne
@@ -67,6 +82,8 @@ data class Personne(val name: String, val prenom: String)
 fun Personne.getNomComplet(): String {
     return "va-[${this.name}-${this.prenom}]"
 }
-fun Personne.getNomComplet2(fn: (String) -> Unit){
+
+fun Personne.getNomComplet2(fn: (String) -> Unit) {
     fn("vb-[${this.name}-${this.prenom}]")
 }
+
