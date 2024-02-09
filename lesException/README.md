@@ -39,6 +39,7 @@ try {
         }
 ```
 *kotlin-stdlib / kotlin*<br>
+**Throwable :** Classe de base pour toutes les erreurs et exceptions. Seules les instances de cette classe peuvent être lancées ou capturées.
 
 open class **Throwable**<br>
 |-open class Error : Throwable<br>
