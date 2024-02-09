@@ -38,3 +38,14 @@ try {
             }
         }
 ```
+*kotlin-stdlib / kotlin*<br>
+
+open class **Throwable**<br>
+|-open class Error : Throwable<br>
+|-open class Exception : Throwable<br>
+|-open class RuntimeException : Exception<br>
+|-open class CharacterCodingException : Exception<br>
+|-class NoSuchPropertyException : Exception<br>
+|-class IllegalPropertyDelegateAccessException : Exception<br>
+|-class IllegalCallableAccessException : Exception<br>
+|-class ForeignException : Exception<br>

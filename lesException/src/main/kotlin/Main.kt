@@ -1,5 +1,7 @@
 package fr.hamtec
 
+import java.io.IOException
+
 fun main() {
     instructionMultiCatch()
     instructionSimpleCatch()
