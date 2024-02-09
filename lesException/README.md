@@ -24,3 +24,17 @@ Cependant, Kotlin n’a pas pris en charge cette fonctionnalité jusqu’à la v
             println("Erreur! => ${exe.message}")
         }
 ```
+
+Et pour avoir une version qui ressemble au multi-catch
+```
+try {
+            val result = 12/Integer.parseInt("A")
+            println (result)
+        } catch (exe: Exception) {
+            when(exe){
+                is ArithmeticException -> println("${exe.message}")
+                is NumberFormatException -> println("${exe.message}")
+                exe -> println("Impossible")
+            }
+        }
+```

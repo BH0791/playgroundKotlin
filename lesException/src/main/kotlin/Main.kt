@@ -6,14 +6,13 @@ fun main() {
     println("Hello les exceptions")
 
         try {
-
-            val result = Integer.parseInt("2")
+            val result = 12/Integer.parseInt("A")
             println (result)
-
-        } catch (exe: ArithmeticException) {
-            println("Erreur! => ${exe.message}")
-        }catch (exe: NumberFormatException){
-            println("Erreur! => ${exe.message}")
-
+        } catch (exe: Exception) {
+            when(exe){
+                is ArithmeticException -> println("${exe.message}")
+                is NumberFormatException -> println("${exe.message}")
+                exe -> println("Impossible")
+            }
         }
 }
