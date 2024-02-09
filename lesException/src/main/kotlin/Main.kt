@@ -1,10 +1,25 @@
 package fr.hamtec
 
-import java.io.IOException
-
 fun main() {
-    instructionMultiCatch()
-    instructionSimpleCatch()
+//    instructionMultiCatch()
+//    instructionSimpleCatch()
+    captureException()
+}
+
+fun add(a: Int, b: Int): Int {
+    if (a <= 0){
+        throw IllegalArgumentException("Message = a <= 0")
+    }else if(b <= 0){
+        throw IllegalArgumentException("Message = b <= 0")
+    }
+        return a + b
+}
+
+private fun captureException() {
+    println("Lever une Exeption")
+    val a: Int = 10
+    val b: Int = -5
+    println(add(a, b))
 }
 
 private fun instructionMultiCatch() {

@@ -26,6 +26,14 @@ Mon programme...
 
 *Le 05/02/2027 Approfondir le différent chapitre et la nouvelle syntaxe Kotlin*
 
+- Les exceptions
+- Le type Nullable
+- Les méthodes statiques
+- Les attrbuts statiques
+- Les extensions
+- Les alias
+
+**Le 09/02/2027** Ca avance bien mais la syntaxe Kotlin me fait mal au crâne (-9
 
 # Informations
 
