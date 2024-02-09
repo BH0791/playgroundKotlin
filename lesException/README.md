@@ -1,4 +1,4 @@
-## Les exceptions
+## Les exceptions en java c'est mieux!
 
 Java prend en charge la capture de plusieurs exceptions dans un bloc catch, par exemple :
 
