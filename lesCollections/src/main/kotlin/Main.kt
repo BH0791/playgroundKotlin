@@ -2,12 +2,33 @@ package fr.hamtec
 
 import java.util.*
 
-
 fun main() {
     println("Hello collection!")
-    tableauArrayList()
+    VectorExample()
+}
+fun VectorExample(){
 
+    //Create a vector
+    var vec = Vector<String?>()
+    //Adding elements using add() method of List
+    vec.add("Tiger");
+    vec.add("Lion");
+    vec.add("Dog");
+    vec.add("Elephant");
+    //Adding elements using addElement() method of Vector
+    vec.addElement("Rat");
+    vec.addElement("Cat");
+    vec.addElement("Deer");
 
+    System.out.println("Elements are: "+vec);
+}
+fun tableauLinkedListJava(){
+    val al2 = LinkedList<String>()
+    al2.add("James");//adding object in linkedlist
+    al2.add("Serena");
+    al2.add("Swati");
+    al2.add("Junaid");
+    System.out.println("linkedlist: "+al2);
 }
 fun tableauTreeSetJava(){
     println()
