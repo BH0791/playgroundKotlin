@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm")
+    id("org.jetbrains.dokka")
 }
 
 group = "fr.hamtec"
@@ -11,6 +12,7 @@ repositories {
 
 dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
 }
 
 tasks.test {

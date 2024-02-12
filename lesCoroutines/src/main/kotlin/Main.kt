@@ -1,5 +1,8 @@
 package fr.hamtec
-
+import kotlinx.coroutines.runBlocking
 fun main() {
-    println("Hello World!")
+    println("Hello coroutines!")
+    runBlocking{
+
+    }
 }
