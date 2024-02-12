@@ -35,6 +35,11 @@ Mon programme...
 
 **Le 09/02/2027** Ca avance bien mais la syntaxe Kotlin me fait mal au crâne (-9
 
+- Les conversions de type
+- Les collections
+- Les séquences
+- La programmation asynchrone avec les coroutines
+
 # Informations
 
 
