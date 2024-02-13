@@ -1,19 +1,29 @@
 package fr.hamtec
 
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
-import kotlinx.serialization.*
-import kotlinx.serialization.json.*
-import okio.FileSystem
-import okio.Path.Companion.toPath
+import kotlinx.coroutines.*
 import java.io.BufferedReader
 import java.io.File
 import java.io.FileReader
 import java.io.InputStream
 
 fun main() {
-    GlobalScopelaunchDemo()
+    GlobalScopelaunchDemo2()
+}
+
+private fun GlobalScopelaunchDemo2() {
+    println("The courtine is starting")
+
+    val job = GlobalScope.launch {
+        println("Befror")
+        delay(1000)
+        println("After")
+    }
+    runBlocking {
+        println("Befror job started")
+        job.join()
+        println("After job started")
+    }
+    println("The courtine is finished")
 }
 
 private fun runBlockingDemo() {
@@ -46,14 +56,16 @@ private fun GlobalScopelaunchDemo() {
     println("After coroutine + sleep:5")
     Thread.sleep(5_000) // ** 5s
 }
-fun lectureEcr(){
+
+fun lectureEcr() {
     val file = File("/app/logs/january.log")
     val reader = BufferedReader(FileReader(file, Charsets.UTF_8))
     reader.lines().forEach { println(it) }
 }
-fun lectureDemo(){
+
+fun lectureDemo() {
     // ** https://stacklima.com/lire-a-partir-de-fichiers-a-l-aide-de-inputreader-dans-kotlin/
-    val inputStream: InputStream = File ("gfg.txt").inputStream()
-    val inputString = inputStream.reader().use {it.readText()}
-    println (inputString)
+    val inputStream: InputStream = File("gfg.txt").inputStream()
+    val inputString = inputStream.reader().use { it.readText() }
+    println(inputString)
 }
