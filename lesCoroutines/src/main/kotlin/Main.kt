@@ -13,17 +13,25 @@ fun main() {
 private fun GlobalScopelaunchDemo2() {
     println("The courtine is starting")
 
-    val job = GlobalScope.launch {
-        println("Befror")
-        delay(1000)
-        println("After")
-    }
     runBlocking {
-        println("Befror job started")
-        job.join()
-        println("After job started")
+        println("Starting runBlocking...")
+        val apiJob = GlobalScope.launch {
+            callAPI()
+        }
+        GlobalScope.launch{
+            println("Starting GlobalScope.launch...")
+            delay(10_000)
+            println("Finish GlobalScope.launch 10_000...")
+            apiJob.cancel()
+        }
+        apiJob.join()
+        println("The API has been cancelled ? ${apiJob.isCancelled}")
+        println("Finished runBlocking...")
     }
-    println("The courtine is finished")
+}
+suspend fun callAPI():String {
+    delay(30_000)
+    return "The result"
 }
 
 private fun runBlockingDemo() {
