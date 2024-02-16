@@ -6,6 +6,59 @@ fun main() {
     println("Start program")
 
     runBlocking {
+
+        val parentJob = GlobalScope.launch {
+
+            println("Parent coroutine ++")
+            launch(Dispatchers.IO) {
+                println("First child coroutine ")
+                delay(1000)
+                println("End of first child coroutine ")
+            }
+            launch(SupervisorJob()) {
+                println("Second child coroutine ")
+                delay(1000)
+                println("End of second child coroutine ")
+            }
+            delay(2000)
+            println("End of parent coroutine ++")
+        }
+        parentJob.join()
+    }
+    println("End of program")
+
+}
+
+fun addObjectDispatchers() {
+    println("Start program")
+
+    runBlocking {
+
+        val parentJob = GlobalScope.launch {
+
+            println("Parent coroutine ++")
+            launch(Dispatchers.IO) {
+                println("First child coroutine ")
+                delay(1000)
+                println("End of first child coroutine ")
+            }
+            launch(SupervisorJob()) {
+                println("Second child coroutine ")
+                delay(1000)
+                println("End of second child coroutine ")
+            }
+            delay(2000)
+            println("End of parent coroutine ++")
+        }
+        parentJob.join()
+    }
+    println("End of program")
+}
+
+fun addObjectSupervisorJob() {
+    println("Start program")
+
+    runBlocking {
         //println("Coroutine runBlocking +++++")
 
         val parentJob = GlobalScope.launch {
@@ -16,21 +69,21 @@ fun main() {
                 delay(1000)
                 println("End of first child coroutine ")
             }
-            launch(NonCancellable) {
+            launch(SupervisorJob()) {
                 println("Second child coroutine ")
-                delay(1000)
+                50 / 0
                 println("End of second child coroutine ")
             }
             println("End of parent coroutine")
         }
-        parentJob.cancel()
+        parentJob.join()
         //println("End coroutine runBlocking +++++")
     }
     Thread.sleep(1500)
     println("End of program")
-
 }
-fun addObjectTypeJob(){
+
+fun addObjectTypeJob() {
     println("Start program")
 
     runBlocking {
