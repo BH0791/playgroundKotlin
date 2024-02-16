@@ -10,12 +10,68 @@ fun main() {
         val parentJob = GlobalScope.launch {
 
             println("Parent coroutine ++")
-            launch(Dispatchers.IO) {
+            launch() {
                 println("First child coroutine ")
                 delay(1000)
                 println("End of first child coroutine ")
             }
-            launch(SupervisorJob()) {
+            launch(SupervisorJob() + Dispatchers.IO + CoroutineExceptionHandler{
+                _, throwable -> println("Failed to launch : ${throwable.message}")
+            }) {
+                println("Second child coroutine ")
+                50/0
+                println("End of second child coroutine ")
+            }
+            delay(1500)
+            println("End of parent coroutine ++")
+        }
+        parentJob.join()
+    }
+    println("End of program")
+
+}
+fun addTreeOptions(){
+    println("Start program")
+
+    runBlocking {
+
+        val parentJob = GlobalScope.launch {
+
+            println("Parent coroutine ++")
+            launch() {
+                println("First child coroutine ")
+                delay(1000)
+                println("End of first child coroutine ")
+            }
+            launch(SupervisorJob() + Dispatchers.IO + CoroutineExceptionHandler{
+                    _, throwable -> println("Failed to launch : ${throwable.message}")
+            }) {
+                println("Second child coroutine ")
+                50/0
+                println("End of second child coroutine ")
+            }
+            delay(1500)
+            println("End of parent coroutine ++")
+        }
+        parentJob.join()
+    }
+    println("End of program")
+}
+
+fun addMultiOption(){
+    println("Start program")
+
+    runBlocking {
+
+        val parentJob = GlobalScope.launch {
+
+            println("Parent coroutine ++")
+            launch(Dispatchers.Default) {
+                println("First child coroutine ")
+                delay(1000)
+                println("End of first child coroutine ")
+            }
+            launch(SupervisorJob() + Dispatchers.IO) {
                 println("Second child coroutine ")
                 delay(1000)
                 println("End of second child coroutine ")
@@ -26,7 +82,6 @@ fun main() {
         parentJob.join()
     }
     println("End of program")
-
 }
 
 fun addObjectDispatchers() {
