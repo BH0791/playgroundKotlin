@@ -3,9 +3,10 @@ package fr.hamtec
 import java.io.*
 import java.nio.file.Files
 import java.nio.file.Paths
+import java.util.*
 
 fun main() {
-    utilisationFileBufferedWriter()
+    utillecture()
 }
 
 fun utilisationFileWriteText() {
@@ -75,4 +76,29 @@ fun utilisationFileBufferedWriter(){
     val text = "Some log…"
 
     file.bufferedWriter().use { bw -> bw.write(text) }
+}
+
+fun utilisationPrintStream(){
+    /**
+     * UN PrintStream peut être utilisé pour ajouter des fonctionnalités à un flux de sortie. Mais tous les caractères
+     * imprimés par un PrintStream sont convertis en octets à l'aide de l'encodage de caractères par défaut de la plate-forme.
+     */
+    val file = File("LireEtEcrire\\src\\main\\resources\\data4.txt")
+    val text = "Some log…"
+
+    FileOutputStream(file).use { fos ->
+        PrintStream(fos).use { out -> out.print(text) }
+    }
+}
+
+fun utillecture(){
+    val file = File("LireEtEcrire\\src\\main\\resources\\data3.txt")
+
+    val prop = Properties()
+    FileInputStream(file).use { prop.load(it) }
+
+    // Print all properties
+    prop.stringPropertyNames()
+        .associateWith {prop.getProperty(it)}
+        .forEach { println(it) }
 }
