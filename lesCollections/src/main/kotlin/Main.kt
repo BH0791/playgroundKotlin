@@ -1,11 +1,15 @@
 package fr.hamtec
 
 import java.util.*
+import kotlin.time.Duration
+import kotlin.time.Duration.Companion.milliseconds
+import kotlin.time.Duration.Companion.nanoseconds
 
 
 fun main() {
     println("Hello collection!")
-    ListOfExemple()
+    testmutableListOf()
+//    controle()
 }
 
 fun VectorExample() {
@@ -72,21 +76,65 @@ fun ArrayListExemple() {
         println(i)
 }
 
-fun ListOfExemple() {
+fun ListOfBoucles() {
     val solarSystem = listOf("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
+    println("\nSimple liste les élément")
     println(solarSystem)
-
+    println("Boucle for()")
     for (index in solarSystem) {
         print(index + " ")
     }
-    println()
+    println("\nforEach()")
     solarSystem.forEach {
         print(it + " ")
     }
-    println()
+    println("\nIterator")
     val numbersIterator = solarSystem.iterator()
     while (numbersIterator.hasNext()) {
         print(numbersIterator.next() + " ")
     }
+}
+
+fun testBoucles() {
+    val doubled = List(10, { it })  // or MutableList if you want to change its content later
+    println(doubled)
+}
+
+fun controle() {
+    val names = mutableListOf<Int>()
+    for (i in 1..10) {
+        names.add(i)
+    }
+    names.add(5, 50)
+    println("Aff : $names")
+}
+fun testmutableListOf() {
+    val names = mutableListOf<Int>()
+
+    val begin = System.nanoTime()
+    for (i in 1..100_000_000) {
+        names.add(i)
+    }
+    val end = System.nanoTime()
+
+    val begin2 = System.nanoTime()
+    //names.add(500_000, 5)
+    val end2 = System.nanoTime()
+
+
+
+
+    println("Boucles de 1 à 1 millions")
+    println("Nanosecondes : ${end-begin}ns")
+    val  result = end - begin
+    val negativeNanosecond: Duration = result.nanoseconds
+    print("Millisecondes : ")
+    println(negativeNanosecond)
+
+    println()
+    val result2 = end2 - begin2
+    println("Nanosecondes : ${end2-begin2}ns")
+    val negativeNanosecond2: Duration = result2.nanoseconds
+    print(negativeNanosecond2)
 }
 
