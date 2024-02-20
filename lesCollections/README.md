@@ -1,7 +1,7 @@
 ## Les collections
 
-List et MutableList
-
+List et MutableList<br>
+*fun \<T> listOf(vararg elements: T): List\<T>*<br>
 Une liste est une collection triée et redimensionnable, généralement implémentée en tant que tableau redimensionnable. Lorsque le tableau est plein et que vous essayez d'insérer un nouvel élément, il est copié dans un nouveau tableau de plus grande taille.
 
 Set et MutableSet

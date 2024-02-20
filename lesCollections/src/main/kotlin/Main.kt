@@ -5,6 +5,7 @@ import java.util.*
 
 fun main() {
     println("Hello collection!")
+    ListOfExemple()
 }
 
 fun VectorExample() {
@@ -76,7 +77,16 @@ fun ListOfExemple() {
     println(solarSystem)
 
     for (index in solarSystem) {
-        println(index)
+        print(index + " ")
+    }
+    println()
+    solarSystem.forEach {
+        print(it + " ")
+    }
+    println()
+    val numbersIterator = solarSystem.iterator()
+    while (numbersIterator.hasNext()) {
+        print(numbersIterator.next() + " ")
     }
 }
 
