@@ -8,10 +8,15 @@ import kotlin.time.Duration.Companion.nanoseconds
 
 fun main() {
     println("Hello collection!")
-    testmutableListOf()
-//    controle()
+    listofDemo()
 }
+fun listofDemo() {
 
+    val valeurs = listOf(1,2,3,4,5,6,7,8,9,10,11,12,13,14)
+
+
+    valeurs.forEach { print("$it ") }
+}
 fun VectorExample() {
 
     //Create a vector
