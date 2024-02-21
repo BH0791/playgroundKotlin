@@ -12,3 +12,5 @@ printf "%.*f\n" 2 3.1415926<br>
 
 printf "%.*f\n" 4 3.1415926<br>
 3.1416
+
+la fonction String.format de Kotlin appelle la méthode String.format de Java en interne
