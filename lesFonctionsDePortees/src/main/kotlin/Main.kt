@@ -2,29 +2,11 @@ package fr.hamtec
 
 fun main() {
 
-//    fun operation(a:Int, oper:(Int)->Int){
-//        println(oper(a))
-//    }
-//    operation(10, {x -> x*10})
-//    operation(12, fun(x:Int): Int{return x*10})
-//    println("Hello World!")
-//    Student("David", "Miller", 24, "New York").let {
-//        println(it)
-//        it.moving("Chicago")
-//        it.ageIncrease()
-//        println(it)
-//    }
-//    val animal = Animal().let {
-//        //The it is the object, which is Animal in this case
-//        "The animal is from: ${it.origin}"
-//    }
-//    println()
-//    letExample1()
-//    println()
-//    letExample()
-    letExampleW()
+    letExemple7()
+
 
 }
+
 
 private fun alsoExample2() {
     Animal().also { animal ->
@@ -92,7 +74,7 @@ private fun applyExample1() {
 
 private fun letExample1() {
     val animal = Animal().let {
-        //The it is the object, which is Animal in this case
+        //Le "it" est l'objet, qui est ici l'animal.
         it.origin = "Nigeria"
     }
     print(animal)
@@ -113,8 +95,57 @@ private fun letExample4() {
     }
     print(animal)
 }
+
+private fun letExemple6() {
+
+    fun add(a: Int, b: Int): Int = a + b
+
+    println("Exemple-6")
+    add(5, 20).let {
+        if(it > 10) {
+            println("Sup a 10 ==> $it")
+        } else {
+            println("Inf a 0 ==> $it")
+        }
+    }
+}
+
+private fun letExemple7() {
+    println(
+            "Vous pouvez également l’utiliser pour introduire des variables locales avec une portée limitée afin de " +
+                    "\nfaciliter la lecture de votre code. Pour définir une nouvelle variable pour l’objet de contexte, indiquez " +
+                    "\nson nom en tant qu’argument lambda afin qu’il puisse être utilisé à la place de la variable par défaut"
+    )
+    val numbers = listOf("one", "two", "three", "four")
+    val modifiedFirstItem = numbers.first().let { firstItem ->
+        println("Le premier élément de la liste est '$firstItem'")
+        if(firstItem.length >= 5) firstItem else "!" + firstItem + "!"
+    }.uppercase()
+    println("Premier point après modifications: '$modifiedFirstItem'")
+}
+
+private fun letExemple8() {
+    val numbers = mutableListOf("one", "two", "three", "four", "five")
+    numbers.map { it.length }.filter { it > 3 }.let(::println)
+}
+
+private fun letExemple9() {
+    val numbers = mutableListOf("one", "two", "three", "four", "five")
+    val resultList = numbers.map { it.length }.filter { it > 3 }
+    println(resultList)
+}
+
+private fun letExemple5() {
+    println("Exemple-5")
+    val str: String? = "Hello"
+    val length = str?.let {
+        println("let() appelé sur $it")
+        it.length
+    }
+}
+
 private fun letExampleW() {
-    val animal = Animal().run{
+    val animal = Animal().run {
         "${this.origin}"
     }
     print(animal)
