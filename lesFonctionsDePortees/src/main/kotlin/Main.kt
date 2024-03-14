@@ -2,7 +2,7 @@ package fr.hamtec
 
 fun main() {
 
-    letExemple7()
+    runExemple2()
 
 
 }
@@ -34,7 +34,7 @@ private fun alsoExample1() {
     println(animal)
 }
 
-private fun runExample() {
+private fun runExample1() {
     print(
             Animal().run {
                 //this is the object, which is Animal in this case
@@ -43,6 +43,37 @@ private fun runExample() {
                 "The animal is called $name and is from $origin"
             }
     )
+}
+
+private fun runExemple2() {
+    val service = MultiportService("https://example.kotlinlang.org", 80)
+
+    val result = service.run {
+        port = 8080
+        query(prepareRequest() + " to port $port")
+    }
+
+// the same code written with let() function:
+    val letResult = service.let {
+        it.port = 8080
+        it.query(it.prepareRequest() + " to port ${it.port}")
+    }
+    println(result)
+    println(letResult)
+}
+
+private fun runExemple3() {
+    val hexNumberRegex = run {
+        val digits = "0-9"
+        val hexDigits = "A-Fa-f"
+        val sign = "+-"
+
+        Regex("[$sign]?[$digits$hexDigits]+")
+    }
+
+    for(match in hexNumberRegex.findAll("+123 -FFFF !%*& 88 XYZ")) {
+        println(match.value)
+    }
 }
 
 private fun withExample() {
@@ -157,6 +188,11 @@ private fun letExample3() {
         "The animal is from: $origin"
     }
     print(animal)
+}
+
+class MultiportService(var url: String, var port: Int) {
+    fun prepareRequest(): String = "Default request"
+    fun query(request: String): String = "Result for query '$request'"
 }
 
 class Animal() {
