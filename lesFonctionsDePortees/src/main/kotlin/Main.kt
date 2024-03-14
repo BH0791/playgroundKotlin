@@ -1,10 +1,7 @@
 package fr.hamtec
 
 fun main() {
-
-    runExemple2()
-
-
+    runExemple5()
 }
 
 
@@ -62,6 +59,27 @@ private fun runExemple2() {
     println(letResult)
 }
 
+private fun runExemple4() {
+    val result = run {
+        val numerator = generatorRandom() + generatorRandom()
+        val denominator = generatorRandom() - generatorRandom()
+        numerator / denominator
+    }
+    println(result)
+}
+
+private fun runExemple5() {
+    val dog = Dog("Doggo")
+
+    val tatoo = dog.run {
+        tatooNumber = "1234"
+        doTatoo()
+    }
+    println(tatoo)
+}
+
+fun generatorRandom(): Int = (1..100).random()
+
 private fun runExemple3() {
     val hexNumberRegex = run {
         val digits = "0-9"
@@ -76,13 +94,30 @@ private fun runExemple3() {
     }
 }
 
-private fun withExample() {
+private fun withExample1() {
     val animal = with(Animal()) {
         "The name of the animal is $name and the origin is $origin"
     }
 
     println(animal)
 
+}
+
+private fun withExample2() {
+    val numbers = mutableListOf("one", "two", "three")
+    with(numbers) {
+        println("'with' is called with argument $this")
+        println("It contains $size elements")
+    }
+}
+
+private fun withExemple3() {
+    val numbers = mutableListOf("one", "two", "three")
+    val firstAndLast = with(numbers) {
+        "The first element is ${first()}," +
+                " the last element is ${last()}"
+    }
+    println(firstAndLast)
 }
 
 private fun applyExample2() {
@@ -199,6 +234,11 @@ class Animal() {
     var name = "Panda"
     var origin = "D'où que viennent les pandas"
     var colour = "Noir et blanc"
+}
+
+data class Dog(val name: String) {
+    var tatooNumber: String? = null
+    fun doTatoo(): String = "$name-$tatooNumber"
 }
 
 data class Student(
