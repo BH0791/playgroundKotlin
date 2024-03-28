@@ -78,8 +78,6 @@ private fun runExemple5() {
     println(tatoo)
 }
 
-fun generatorRandom(): Int = (1..100).random()
-
 private fun runExemple3() {
     val hexNumberRegex = run {
         val digits = "0-9"
@@ -255,3 +253,5 @@ data class Student(
         age++
     }
 }
+
+fun generatorRandom(): Int = (1..100).random()
