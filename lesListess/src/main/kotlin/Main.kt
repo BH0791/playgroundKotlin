@@ -3,8 +3,27 @@ package fr.hamtec
 fun main() {
     println("Hello List!")
 //    presentationDesListes()
-    presentationDesListesModifiable()
+//    presentationDesListesModifiable()
+//    presentationDesListesModifiable()
+    lireUneBoucleFor()
 
+}
+private fun lireUneBoucleFor(){
+    val names = listOf("Jessica", "Henry", "Alicia", "Jose")
+    for (name in names) {
+        println("$name - Number of characters: ${name.length}")
+    }
+}
+private fun lireUneBoucleWhile() {
+    val guestsPerFamily = listOf(2, 4, 1, 3)
+    println("$guestsPerFamily")
+    var totalGuests = 0
+    var index = 0
+    while(index < guestsPerFamily.size){
+        totalGuests += guestsPerFamily[index]
+        index++
+    }
+    println("Total Guest Count: $totalGuests")
 }
 
 private fun presentationDesListesModifiable() {
