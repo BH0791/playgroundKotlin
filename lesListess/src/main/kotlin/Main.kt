@@ -2,7 +2,35 @@ package fr.hamtec
 
 fun main() {
     println("Hello List!")
+//    presentationDesListes()
+    presentationDesListesModifiable()
 
+}
+
+private fun presentationDesListesModifiable() {
+    //- MutableList
+    val entrees: MutableList<String> = mutableListOf()
+    println("Add noodles: ${entrees.add("noodles")}")
+    println("Entrees: $entrees")
+    println("Add spaghetti: ${entrees.add("spaghetti")}")
+    println("Entrees: $entrees")
+    println()
+
+    val moreItems = listOf("ravioli", "lasagna", "fettuccine")
+    println("Add list: ${entrees.addAll(moreItems)}")
+    println("Entrees: $entrees")
+    println("Remove spaghetti: ${entrees.remove("spaghetti")}")
+    println("Entrees: $entrees")
+    println("Remove item that doesn't exist: ${entrees.remove("rice")}")
+    println("Entrees: $entrees")
+    println("Remove first element: ${entrees.removeAt(0)}")
+    println("Entrees: $entrees")
+    entrees.clear()
+    println("Entrees: $entrees")
+    println("Empty? ${entrees.isEmpty()}")
+}
+
+private fun presentationDesListes() {
     val numbers1: List<Int> = listOf(1, 2, 3, 4, 5, 6)
     val numbers = listOf(1, 2, 3, 4, 5, 6)
 
@@ -35,5 +63,4 @@ fun main() {
     val oddNumbers = listOf(5, 3, 7, 1)
     println("List: $oddNumbers")
     println("Sorted list: ${oddNumbers.sorted()}")
-
 }
