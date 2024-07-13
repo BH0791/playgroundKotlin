@@ -1,6 +1,6 @@
 plugins {
-    kotlin("jvm") version "1.9.22"
-    id("org.jetbrains.dokka") version "1.9.10"
+    kotlin("jvm") version "2.0.0"
+    id("org.jetbrains.dokka") version "1.9.20"
 }
 
 group = "fr.hamtec"
@@ -12,7 +12,7 @@ repositories {
 
 dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test")
-    dokkaPlugin("org.jetbrains.dokka:android-documentation-plugin:1.9.10")
+    dokkaPlugin("org.jetbrains.dokka:android-documentation-plugin:1.9.20")
 }
 
 tasks.test {

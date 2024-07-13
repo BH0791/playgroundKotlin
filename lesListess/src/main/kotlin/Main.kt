@@ -5,21 +5,23 @@ fun main() {
 //    presentationDesListes()
 //    presentationDesListesModifiable()
 //    presentationDesListesModifiable()
-    lireUneBoucleFor()
-
+//    lireUneBoucleFor()
+    miseEnPratique()
 }
-private fun lireUneBoucleFor(){
+
+private fun lireUneBoucleFor() {
     val names = listOf("Jessica", "Henry", "Alicia", "Jose")
-    for (name in names) {
+    for(name in names) {
         println("$name - Number of characters: ${name.length}")
     }
 }
+
 private fun lireUneBoucleWhile() {
     val guestsPerFamily = listOf(2, 4, 1, 3)
     println("$guestsPerFamily")
     var totalGuests = 0
     var index = 0
-    while(index < guestsPerFamily.size){
+    while(index < guestsPerFamily.size) {
         totalGuests += guestsPerFamily[index]
         index++
     }
@@ -82,4 +84,8 @@ private fun presentationDesListes() {
     val oddNumbers = listOf(5, 3, 7, 1)
     println("List: $oddNumbers")
     println("Sorted list: ${oddNumbers.sorted()}")
+}
+
+private fun miseEnPratique() {
+    // ** https://developer.android.com/codelabs/basic-android-kotlin-training-lists?hl=fr#4
 }
