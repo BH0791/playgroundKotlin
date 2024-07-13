@@ -5,9 +5,7 @@ import kotlinx.coroutines.*
 fun conVoke() {
 
     runBlocking {
-        val parentJob = GlobalScope.launch(CoroutineExceptionHandler { _, throwable ->
-            println("An error occured while executing the coroutine ${throwable.message}")
-        }) {
+        val parentJob = GlobalScope.launch{
             println("Parent coroutine")
 
             launch {
@@ -16,17 +14,19 @@ fun conVoke() {
                 println("End of first child coroutine")
             }
 
-            launch {
+            launch(NonCancellable) {
                 println("Second child coroutine")
-                50 / 0
+                delay(1000L)
                 println("End of second child coroutine")
             }
 
             println("End of parent coroutine")
         }
 
-        parentJob.join()
+        parentJob.cancel()
     }
+
+    Thread.sleep(1500)
     println("End of program")
 }
 
