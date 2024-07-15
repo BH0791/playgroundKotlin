@@ -6,6 +6,6 @@ import kotlinx.coroutines.*
 fun main() {
     println("Start program\n")
 
-    simpleChannel()
+    simpleChannel3()
 
 }
