@@ -53,10 +53,9 @@ fun simpleChannel2() {
     println("\nEnd of program")
 }
 
-fun simpleChannel3() {
-    runBlocking {
+fun simpleChannel3() = runBlocking {
 
-        val channel = Channel<Int>(Channel.UNLIMITED)
+        val channel: Channel<Int> = Channel<Int>(Channel.UNLIMITED)
 
         launch(newSingleThreadContext("Emeteur_1")) {
             for(i in 1..5) {
@@ -95,6 +94,4 @@ fun simpleChannel3() {
 
 
     }
-    println("\nEnd of program")
-}
 

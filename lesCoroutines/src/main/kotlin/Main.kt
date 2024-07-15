@@ -1,11 +1,15 @@
 package fr.hamtec
 
-import fr.hamtec.bo.*
-import kotlinx.coroutines.*
+import fr.hamtec.bo.supSimple
+import fr.hamtec.bo.testFlowExample
+import fr.hamtec.bo.testFlowOfInt
+import kotlinx.coroutines.DelicateCoroutinesApi
 
+@OptIn(DelicateCoroutinesApi::class)
 fun main() {
     println("Start program\n")
-
-    simpleChannel3()
+//    flowTest_1()
+//    flowTest_2()
+    testFlowExample()
 
 }
