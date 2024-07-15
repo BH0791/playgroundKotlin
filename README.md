@@ -24,7 +24,7 @@ Mon programme...
 - Les classes de données
 - Les interfaces
 
-*Le 05/02/2027 Approfondir les différents chapitres et la nouvelle syntaxe Kotlin*
+*Le 05/02/2024 Approfondir les différents chapitres et la nouvelle syntaxe Kotlin*
 
 - Les exceptions
 - Le type Nullable
@@ -33,7 +33,7 @@ Mon programme...
 - Les extensions
 - Les alias
 
-**Le 09/02/2027** Ca avance bien mais la syntaxe Kotlin me fait mal au crâne (-9
+**Le 09/02/2024** Ca avance bien mais la syntaxe Kotlin me fait mal au crâne (-9
 
 - Les conversions de type
 - Les collections
