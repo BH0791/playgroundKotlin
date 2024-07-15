@@ -39,6 +39,8 @@ Mon programme...
 - Les collections
 - Les séquences
 - La programmation asynchrone avec les coroutines
+- Les Channels (Une étude complète)
+- Les Flows (Une étude complète)
 
 # Informations
 

@@ -59,7 +59,7 @@ fun simpleChannel3() {
         val channel = Channel<Int>(Channel.UNLIMITED)
 
         launch(newSingleThreadContext("Emeteur_1")) {
-            for(i in 1..10) {
+            for(i in 1..5) {
                 channel.send(i)
                 println("Sending-1 the value $i")
             }
@@ -70,7 +70,7 @@ fun simpleChannel3() {
 //                delay(1000)
 //                println("Receiving-3 the value $dataReceived")
 //            }
-            for(j in 1..10) {
+            for(j in 1..5) {
                 channel.send(j)
                 println("Sending-2 the value $j")
             }
