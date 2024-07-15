@@ -24,7 +24,7 @@ Mon programme...
 - Les classes de données
 - Les interfaces
 
-*Le 05/02/2027 Approfondir le différent chapitre et la nouvelle syntaxe Kotlin*
+*Le 05/02/2027 Approfondir les différents chapitres et la nouvelle syntaxe Kotlin*
 
 - Les exceptions
 - Le type Nullable
