@@ -1,4 +1,4 @@
-package fr.hamtec.bo
+package fr.hamtec.exoFilm
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.asFlow
@@ -52,4 +52,12 @@ val spiderMen: Flow<Actor> = flow {
     emit(tobeyMaguire)
     emit(andrewGarfield)
     emit(tomHolland)
+}
+val infiniteJLFlowActors: Flow<Actor> = flow {
+    while (true) {
+        emit(henryCavill)
+        emit(galGadot)
+        emit(ezraMiller)
+        emit(jasonMomoa)
+    }
 }
