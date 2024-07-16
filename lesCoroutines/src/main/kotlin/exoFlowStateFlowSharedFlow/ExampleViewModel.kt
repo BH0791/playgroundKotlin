@@ -1,16 +1,13 @@
 package fr.hamtec.exoFlowStateFlowSharedFlow
 
-import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.asSharedFlow
-import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.*
 
 class ExampleViewModel {
-    private val _mutableSharedFlow = MutableSharedFlow<Int>()
+    private val _mutableSharedFlow: MutableSharedFlow<Int> = MutableSharedFlow<Int>()
     // Represents this mutable shared flow as a read-only shared flow.
-    val sharedFlow = _mutableSharedFlow.asSharedFlow()
+    val sharedFlow: SharedFlow<Int> = _mutableSharedFlow.asSharedFlow()
 
-    private val _mutableStateFlow = MutableStateFlow(0)
+    private val _mutableStateFlow: MutableStateFlow<Int> = MutableStateFlow(0)
     // Represents this mutable state flow as a read-only state flow.
-    val stateFlow = _mutableStateFlow.asStateFlow()
+    val stateFlow: StateFlow<Int> = _mutableStateFlow.asStateFlow()
 }

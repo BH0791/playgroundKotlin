@@ -1,7 +1,8 @@
 package fr.hamtec.exoFlow
 
-import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
@@ -15,7 +16,9 @@ import kotlinx.coroutines.runBlocking
 //+      de relecture les plus récentes sont stockées et le comportement de débordement de la mémoire tampon n'est jamais
 //+      déclenché et n'a aucun effet.
 
-val sharedFlow = MutableSharedFlow<Int>( replay = 1 )
+private val _sharedFlow = MutableSharedFlow<Int>( replay = 1 )
+//* Représente ce flux partagé mutable comme un flux partagé en lecture seule
+val sharedFlow: SharedFlow<Int> = _sharedFlow.asSharedFlow()
 
 fun emitDatasharedFlow() {
     runBlocking {
@@ -23,20 +26,20 @@ fun emitDatasharedFlow() {
 // Emit values to sharedFlow
         val job = launch {
             for(i in 1..15) {
-                sharedFlow.emit(i)
+                _sharedFlow.emit(i)
             }
         }
 
         // Collect values from sharedFlow
         launch {
-            sharedFlow.collect { value ->
+            _sharedFlow.collect { value ->
                 println("Collector 1 received: $value")
             }
         }
 
         // Collect values from sharedFlow
         launch {
-            sharedFlow.collect { value ->
+            _sharedFlow.collect { value ->
                 println("Collector 2 received: $value")
             }
         }

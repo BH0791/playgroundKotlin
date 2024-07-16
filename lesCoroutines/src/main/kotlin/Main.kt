@@ -9,8 +9,8 @@ import kotlinx.coroutines.flow.collectLatest
 @OptIn(DelicateCoroutinesApi::class)
 fun main() {
     println("Start program\n")
-    emitDatasharedFlow()
-//    emitDataStateFlow()
+//    emitDatasharedFlow()
+    emitDataStateFlow()
 }
 fun testFlow(){
     val viewModel = TestViewModel()
