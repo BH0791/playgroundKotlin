@@ -9,4 +9,13 @@ abstract class Dwelling(
     fun hasRoom(): Boolean {
         return residents < capacity
     }
+    abstract fun floorArea(): Double
+    fun getRoom() {
+        if (capacity > residents) {
+            residents++
+            println("You got a room!")
+        } else {
+            println("Sorry, at capacity and no rooms left.")
+        }
+    }
 }
