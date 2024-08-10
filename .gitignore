@@ -6,8 +6,8 @@ build/
 
 ### IntelliJ IDEA ###
 
-.build.gradle.kts
-.settings.gradle.kts
+build.gradle.kts
+settings.gradle.kts
 .gitignore
 src/main/
 .idea/modules.xml
