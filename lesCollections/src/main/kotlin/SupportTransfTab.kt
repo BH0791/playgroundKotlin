@@ -35,10 +35,10 @@ fun envoieDonnees() {
  * Exécutez le code ci-dessus et notez que la méthode isEmpty() renvoie true avant l’ajout d’un élément et false après l’ajout d’un élément, comme indiqué ci-dessous.
  */
 fun methMutableEmptyListMutableListOf(): Unit {
-    val mutableEmptyList: MutableList<String> = mutableListOf();
-    println(mutableEmptyList.isEmpty());
+    val mutableEmptyList: MutableList<String> = mutableListOf()
+    println(mutableEmptyList.isEmpty())
     mutableEmptyList.add("I am the first element !")
-    println(mutableEmptyList.isEmpty());
+    println(mutableEmptyList.isEmpty())
 }
 
 /**
@@ -49,10 +49,10 @@ fun methMutableEmptyListMutableListOf(): Unit {
  * Une fois que nous avons accès à la liste mutable, nous pouvons invoquer la méthode isEmpty() pour vérifier si la méthode est vide. Exécutez le code ci-dessus et observez que les sorties sont comme indiqué ci-dessous.
  */
 fun methMutableEmptyListArrayListOf(): Unit {
-    val mutableEmptyList: MutableList<String> = arrayListOf();
-    println(mutableEmptyList.isEmpty());
+    val mutableEmptyList: MutableList<String> = arrayListOf()
+    println(mutableEmptyList.isEmpty())
     mutableEmptyList.add("I am the first element !")
-    println(mutableEmptyList.isEmpty());
+    println(mutableEmptyList.isEmpty())
 }
 
 /**
@@ -64,9 +64,9 @@ fun methMutableEmptyListArrayListOf(): Unit {
  */
 fun methMutableEmptyListLinkedList(): Unit {
     val mutableEmptyList: MutableList<String> = LinkedList();
-    println(mutableEmptyList.isEmpty());
+    println(mutableEmptyList.isEmpty())
     mutableEmptyList.add("I am the first element !")
-    println(mutableEmptyList.isEmpty());
+    println(mutableEmptyList.isEmpty())
 }
 
 /**
@@ -77,10 +77,10 @@ fun methMutableEmptyListLinkedList(): Unit {
  * Exécutez le code ci-dessus et notez que la méthode isEmpty() héritée de la classe AbstractCollection renvoie true avant l’ajout d’un élément et false après l’ajout d’un élément. La sortie est illustrée ci-dessous.
  */
 fun methMutableEmptyListArrayListImplicite(): Unit {
-    val mutableEmptyList  = ArrayList<String>();
-    println(mutableEmptyList.isEmpty());
+    val mutableEmptyList  = ArrayList<String>()
+    println(mutableEmptyList.isEmpty())
     mutableEmptyList.add("I am the first element !")
-    println(mutableEmptyList.isEmpty());
+    println(mutableEmptyList.isEmpty())
 }
 /*
     nous avons appris à créer une MutableList vide en utilisant différentes approches, notamment : en utilisant la
