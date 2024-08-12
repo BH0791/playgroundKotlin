@@ -44,6 +44,7 @@ Mon programme...
 - Les Flows (Une étude complète)
 
 Le 10-08-2024 "toucher au but"
+>Une révélation est la compréhension de ce que l'on sait déjà. C'est le chemin qu'emprunte chaque artiste. Ce tunnel imprécis d'heures ou d'années. Qui mène au moment où l'on peut enfin dire : c'est maintenant.
 
 # Informations
 
