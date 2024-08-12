@@ -1,9 +1,9 @@
 package fr.hamtec
 
-import envoieDonnees
+import methMutableEmptyListArrayListImplicite
 
 
 fun main() {
-    println("Hello collection!!!")
-    envoieDonnees()
+    println("Collection!!!")
+    methMutableEmptyListArrayListImplicite()
 }
