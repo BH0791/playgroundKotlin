@@ -121,6 +121,7 @@ fun commandeResto(): Unit {
     order3.addAll(items)
     order3.print()
 }
+
 fun commandeAmeliorer(): Unit {
     val ordersList = mutableListOf<Order>()
 
@@ -145,9 +146,10 @@ fun commandeAmeliorer(): Unit {
             Order(5)
                     .addItem(Noodles())
                     .addItem(Noodles())
-                    .addItem(Vegetables("Spinach")))
+                    .addItem(Vegetables("Spinach"))
+    )
 
-    for (order in ordersList) {
+    for(order in ordersList) {
         order.print()
         println()
     }

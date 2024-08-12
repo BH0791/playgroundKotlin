@@ -1,13 +1,9 @@
 package fr.hamtec
 
-import PresentationList
-import PresentationListModifiable
-import commandeAmeliorer
-import commandeResto
+import envoieDonnees
 
 
 fun main() {
     println("Hello collection!!!")
-    commandeAmeliorer()
+    envoieDonnees()
 }
-
