@@ -4,7 +4,8 @@ J'apprends le langage de programmation Kotlin *Ce n'est pas un cours!*, je veux 
 
 *Java: JDK-22.0.2*<br>Zulu22.32+15-CA<br>*Kotlin: 2.0.10*<br>*Gradle-8.9*<br>*Android Studio Koala Feature Drop | 2024.1.2 Beta||ou||IntelliJ IDEA 2024.2 (Community Edition)*<br>*pluging: Better Highlights*
 
->C’est dans la vie quotidienne qu’il faut d’abord montrer qu’on sait quelque chose. En lisant des livres, bien sûr, on arrive toujours à acquérir des connaissances, et même à devenir très érudit. Le vrai savoir, c’est d’être capable de se maîtriser, de se libérer de ses faiblesses, de ne plus être éternellement la proie de tiraillements intérieurs.<br>**Omraam Mikhaël Aïvanhov**<br>
+>C’est dans la vie quotidienne qu’il faut d’abord montrer qu’on sait quelque chose. En lisant des livres, bien sûr, on arrive toujours à acquérir des connaissances, et même à devenir très érudit. Le vrai savoir, c’est d’être capable de se maîtriser, de se libérer de ses faiblesses, de ne plus être éternellement la proie de tiraillements intérieurs.
+> >*Omraam Mikhaël Aïvanhov*
 
 *since: 10-01-2024*<br>*Màj:10-08-2024*
 
@@ -45,6 +46,7 @@ Mon programme...
 
 Le 10-08-2024 "toucher au but"
 >Une révélation est la compréhension de ce que l'on sait déjà. C'est le chemin qu'emprunte chaque artiste. Ce tunnel imprécis d'heures ou d'années. Qui mène au moment où l'on peut enfin dire : c'est maintenant.
+> >*Charlotte (2014) de David Foenkinos*
 
 # Informations
 
