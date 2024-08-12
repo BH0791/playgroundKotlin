@@ -1,9 +1,10 @@
 package fr.hamtec
 
-import methMutableEmptyListArrayListImplicite
+import firstTest
+import secondTest
 
 
 fun main() {
     println("Collection!!!")
-    methMutableEmptyListArrayListImplicite()
+    firstTest()
 }
