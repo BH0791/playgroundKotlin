@@ -37,10 +37,13 @@ Mon programme...
 
 - Les conversions de type
 - Les collections
+- Testes
 - Les séquences
 - La programmation asynchrone avec les coroutines
 - Les Channels (Une étude complète)
 - Les Flows (Une étude complète)
+
+Le 10-08-2024 "toucher au but"
 
 # Informations
 
