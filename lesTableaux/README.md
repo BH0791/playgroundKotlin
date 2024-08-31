@@ -35,8 +35,8 @@ Méthodes de la class Array\<T><br><br>
 
 jointToString<br>
 Crée une chaîne de caractères à partir de tous les éléments séparés par un séparateur et en utilisant le préfixe et le postfixe fournis.
-```
 
+```
 fun <T> Array<out T>.joinToString(
     separator: CharSequence = ", ",
     prefix: CharSequence = "",
