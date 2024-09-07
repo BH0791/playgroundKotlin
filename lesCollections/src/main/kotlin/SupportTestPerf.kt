@@ -1,11 +1,11 @@
 import java.util.*
 import kotlin.system.measureTimeMillis
 
-val mutableMutableListOf: MutableList<Int> = mutableListOf();
-val mutablearrayListOf: MutableList<Int> = arrayListOf();
-val mutableEmptyList: MutableList<Int> = LinkedList();
-
+val mutableMutableListOf: MutableList<Int> = mutableListOf()
+val mutablearrayListOf: MutableList<Int> = arrayListOf()
+val mutableEmptyList: MutableList<Int> = LinkedList()
 val mutableNumbers: MutableSet<Int> = mutableSetOf()
+
 fun firstTest(): Unit {
     println("Start testing...")
     val mutableListTest = measureTimeMillis {
@@ -38,6 +38,7 @@ fun firstTest(): Unit {
     println("arrayListOfTest ==> init: $arrayListOfTest ms, add in the middle: $arrayListOfTestAdd ms")
     println("LinkedList ==> init: $LinkedListTest ms, add in the middle: $linkedListTestAdd ms")
 }
+
 fun secondTest(): Unit {
 
 
