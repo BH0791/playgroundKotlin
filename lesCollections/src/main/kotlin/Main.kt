@@ -6,7 +6,6 @@ import listofDemo
 import secondTest
 import simpleMap
 
-
 fun main() {
     simpleMap()
 }
