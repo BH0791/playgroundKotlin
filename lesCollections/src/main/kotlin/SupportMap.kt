@@ -28,15 +28,11 @@ fun simpleMap(): Unit {
 }
 
 fun displayPersons(persons: MutableMap<String, Gender>) {
-
-
     persons.forEach { key, value -> println("Clé: $key - Valeur: $value") }
 }
 
 fun ajouterPersons(persons: MutableMap<String, Gender>): MutableMap<String, Gender> {
-
     persons.put("Lucy", Gender.WOMAN)
     persons.put("Marc", Gender.MAN)
-
     return persons
 }

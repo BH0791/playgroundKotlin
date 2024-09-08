@@ -1,11 +1,8 @@
 package fr.hamtec
 
-import firstTest
-import getShortWordsTo
-import listofDemo
-import secondTest
-import simpleMap
+import TestMap
+import TestMapIndexed
 
 fun main() {
-    simpleMap()
+    TestMapIndexed()
 }
