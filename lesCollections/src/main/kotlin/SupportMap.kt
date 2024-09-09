@@ -1,6 +1,3 @@
-enum class Gender {
-    WOMAN, MAN
-}
 fun simpleMap(): Unit {
 /*
         Pour initialiser un MutableMap vide en Kotlin, vous pouvez utiliser la fonction mutableMapOf().

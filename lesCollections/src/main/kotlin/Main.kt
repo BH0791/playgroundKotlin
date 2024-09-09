@@ -1,8 +1,7 @@
 package fr.hamtec
 
-import TestMap
-import TestMapIndexed
+import TestMutableMapOf
 
 fun main() {
-    TestMapIndexed()
+    TestMutableMapOf()
 }
