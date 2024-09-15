@@ -1,5 +1,6 @@
 package fr.hamtec
 fun main() {
-    TP1()
+    println("Info")
+    afficheInfo()
 }
 
