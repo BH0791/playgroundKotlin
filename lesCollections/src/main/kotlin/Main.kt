@@ -1,7 +1,7 @@
 package fr.hamtec
 
-import TestMutableMapOf
+import PremiereList
 
 fun main() {
-    TestMutableMapOf()
+    PremiereList()
 }
