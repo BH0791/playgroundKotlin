@@ -1,4 +1,4 @@
-package fr.hamtec
+package fr.hamtec.divers
 
 fun TP1(): Unit {
     //* Entrée
