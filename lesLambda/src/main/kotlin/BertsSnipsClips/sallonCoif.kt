@@ -142,6 +142,7 @@ val applyDiscount: (Double) -> Double = { it - 5.0 }
 //** Lambdas et fonctions d'ordre supérieur
 //** Passage de lambdas en tant qu'arguments
 //-- 7.25 - Code from Listing 7.16 and Listing 7.17.
+/*
 fun calculateTotal(
     initialPrice: Double,
     applyDiscount: (Double) -> Double
@@ -153,22 +154,27 @@ fun calculateTotal(
 
     return total
 }
-
+*/
 fun discountFiveDollars(price: Double) = price - 5.0
 fun discountTenPercent(price: Double): Double = price * 0.9
 fun noDiscount(price: Double) = price
-
+/*
 val withFiveDollarsOff1 = calculateTotal(20.0, ::discountFiveDollars) // $16.35
 val withTenPercentOff1  = calculateTotal(20.0, ::discountTenPercent)  // $19.62
 val fullPrice1          = calculateTotal(20.0, ::noDiscount)          // $21.80
+ */
 //-- 7.26 - Remplacement des références de fonctions du Listing 7.25 par des lambdas.
+/*
 val withFiveDollarsOff2 = calculateTotal(20.0, { price -> price - 5.0 }) // $16.35
 val withTenPercentOff2  = calculateTotal(20.0, { price -> price * 0.9 }) // $19.62
 val fullPrice2          = calculateTotal(20.0, { price })                // $21.80
+ */
 //-- 7.27 - Placer un argument lambda en dehors des parenthèses.
-val withFiveDollarsOff = calculateTotal(20.0) { price -> price - 5.0 }
+/*
+val withFiveDollarsOff3 = calculateTotal(20.0) { price -> price - 5.0 }
 val withTenPercentOff  = calculateTotal(20.0) { price -> price * 0.9 }
 val fullPrice          = calculateTotal(20.0) { price -> price }
+ */
 //-- 7.28 - Une fonction d'ordre supérieur avec un seul paramètre, qui est d'un type de fonction.
 fun printSubtotal(applyDiscount: (Double) -> Double) {
     val result = applyDiscount(20.0)
@@ -189,8 +195,70 @@ fun discountForCouponCode(couponCode: String): (Double) -> Double = when (coupon
 }
  */
 //-- 7.31 - Retourner des lambdas à partir d’une fonction.
+/*
 fun discountForCouponCode(couponCode: String): (Double) -> Double = when (couponCode) {
     "FIVE_BUCKS" -> { price -> price - 5.0 }
     "TAKE_10"    -> { price -> price * 0.9 }
+    else         -> { price -> price }
+}
+ */
+
+//** Lambdas avec plusieurs instructions
+//-- 7.32 - Une lambda qui a plusieurs lignes de code.
+/*
+val withFiveDollarsOff = calculateTotal(20.0) { price ->
+    val result = price - 5.0
+    println("Initial price: $price")
+    println("Discounted price: $result")
+    result
+}
+ */
+//-- 7.33 - Tout mettre ensemble.
+fun calculateTotal(
+    initialPrice: Double,
+    applyDiscount: (Double) -> Double
+): Double {
+    // Apply coupon discount
+    val priceAfterDiscount = applyDiscount(initialPrice)
+    // Apply tax
+    val total = priceAfterDiscount * taxMultiplier
+
+    return total
+}
+/*
+fun discountForCouponCode(couponCode: String): (Double) -> Double = when (couponCode) {
+    "FIVE_BUCKS" -> { price -> price - 5.0 }
+    "TAKE_10"    -> { price -> price * 0.9 }
+    else         -> { price -> price }
+}
+ */
+
+val initialPrice = 20.0
+val couponDiscount = discountForCouponCode("FIVE_BUCKS")
+val total = calculateTotal(initialPrice, couponDiscount)
+//-- 7.34 - Ajout de plus de codes promo.
+/*
+fun discountForCouponCode(couponCode: String): (Double) -> Double = when (couponCode) {
+    "FIVE_BUCKS" -> { price -> price - 5.0 }
+    "NINE_BUCKS" -> { price -> price - 9.0 }
+    "TAKE_10"    -> { price -> price * 0.9 }
+    "TAKE_15"    -> { price -> price * 0.85 }
+    else         -> { price -> price }
+}
+ */
+//-- 7.35 - Fonctions qui créent des fonctions.
+fun dollarAmountDiscount(dollarsOff: Double): (Double) -> Double =
+    { price -> price - dollarsOff }
+
+fun percentageDiscount(percentageOff: Double): (Double) -> Double {
+    val multiplier = 1.0 - percentageOff
+    return { price -> price * multiplier }
+}
+//-- 7.36 - Une petite amélioration pour éviter un peu de code dupliqué.
+fun discountForCouponCode(couponCode: String): (Double) -> Double = when (couponCode) {
+    "FIVE_BUCKS" -> dollarAmountDiscount(5.0)
+    "NINE_BUCKS" -> dollarAmountDiscount(9.0)
+    "TAKE_10"    -> percentageDiscount(0.10)
+    "TAKE_15"    -> percentageDiscount(0.15)
     else         -> { price -> price }
 }
