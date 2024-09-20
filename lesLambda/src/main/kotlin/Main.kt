@@ -1,8 +1,8 @@
 package fr.hamtec
 
-import fr.hamtec.BertsSnipsClips.calculateTotal
-import fr.hamtec.BertsSnipsClips.calculateTotalWithFiveDollarDiscount
+import fr.hamtec.BertsSnipsClips.*
+
 fun main() {
-    calculateTotal()
+    printSubtotal { price -> price - 5.0 }
 }
 
