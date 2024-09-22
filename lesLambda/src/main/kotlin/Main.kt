@@ -1,8 +1,8 @@
 package fr.hamtec
 
-import fr.hamtec.chasseAuxBonbons.lanceSupp
+import fr.hamtec.chasseAuxBonbons.lanceFunTypeSecond
 
 fun main() {
-    lanceSupp()
+    lanceFunTypeSecond()
 }
 
