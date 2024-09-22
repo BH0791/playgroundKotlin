@@ -1,8 +1,8 @@
 package fr.hamtec
 
-import fr.hamtec.BertsSnipsClips.*
+import fr.hamtec.chasseAuxBonbons.lanceSupp
 
 fun main() {
-    printSubtotal { price -> price - 5.0 }
+    lanceSupp()
 }
 
