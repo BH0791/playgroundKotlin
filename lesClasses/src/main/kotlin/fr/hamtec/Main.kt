@@ -1,4 +1,4 @@
-package fr.hamtec.chapitre_2_2
+package fr.hamtec
 
 fun main() {
     heart()
