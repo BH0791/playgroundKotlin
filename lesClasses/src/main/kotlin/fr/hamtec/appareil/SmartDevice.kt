@@ -17,14 +17,15 @@ open class SmartDevice constructor(
     }
 
     var deviceStatus = "online"
+    open val deviceType = "unknown"
 
     //+ fonction membre ou méthode -- allumé
     open fun turnOn() {
-        println("Smart device is turned on.")
+        deviceStatus = "on"
     }
 
     //+ fonction membre ou méthode -- éteint
     open fun turnOff() {
-        println("Smart device is turned off.")
+        deviceStatus = "off"
     }
 }

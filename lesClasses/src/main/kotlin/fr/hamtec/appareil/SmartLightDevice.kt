@@ -15,6 +15,8 @@ class SmartLightDevice(
                 field = value
             }
         }
+    
+    override val deviceType = "Smart Light"
 
     /**
      * augmente la luminosité de l'éclairage et imprime une chaîne "Luminosité augmentée à $brightnessLevel." :
@@ -24,12 +26,12 @@ class SmartLightDevice(
         println("Luminosité augmentée à $brightnessLevel.")
     }
     override fun turnOn() {
-        deviceStatus = "on"
+        super.turnOn()
         brightnessLevel = 2
         println("$name allumée. Le niveau de luminosité est $brightnessLevel.")
     }
     override fun turnOff() {
-        deviceStatus = "off"
+        super.turnOff()
         brightnessLevel = 0
         println("Smart Light désactivé")
     }

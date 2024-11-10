@@ -19,6 +19,7 @@ class SmartTvDevice(
                 field = value
             }
         }
+    override val deviceType = "Smart TV"
 
     /**
      * augmente le volume et imprime une chaîne "Le volume du haut-parleur augmente jusqu'à $speakerVolume."
@@ -36,12 +37,12 @@ class SmartTvDevice(
         println("Le nombre de canaux est passé à $channelNumber.")
     }
     override fun turnOn() {
-        deviceStatus = "on"
+        super.turnOn()
         println("$name est activé. Le volume du haut-parleur est réglé sur $speakerVolume et le numéro de canal est réglé sur $channelNumber."
         )
     }
     override fun turnOff() {
-        deviceStatus = "off"
+        super.turnOff()
         println("$name éteint")
     }
 }
