@@ -1,7 +1,10 @@
 package fr.hamtec
 
+import fr.hamtec.chapitre_2_2.utiliserObject
+
 fun main() {
     heart()
+    utiliserObject()
 }
 
 
