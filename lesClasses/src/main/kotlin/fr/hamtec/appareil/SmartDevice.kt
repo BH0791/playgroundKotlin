@@ -1,24 +1,30 @@
 package fr.hamtec.appareil
 
-class SmartDevice {
+open class SmartDevice constructor(
+    val name: String,
+    val category: String
+) {
+    constructor(
+        name: String,
+        category: String,
+        statusCode: Int
+    ): this(name, category) {
+        deviceStatus = when(statusCode) {
+            0 -> "offline"
+            1 -> "online"
+            else -> "unknown"
+        }
+    }
 
-    val name = "Android TV"
-    val category = "Entertainment"
     var deviceStatus = "online"
 
-    var speakerVolume = 2
-        get() = field
-        set(value) {
-            field = value
-        }
-
     //+ fonction membre ou méthode -- allumé
-    fun turnOn() {
+    open fun turnOn() {
         println("Smart device is turned on.")
     }
 
     //+ fonction membre ou méthode -- éteint
-    fun turnOff() {
+    open fun turnOff() {
         println("Smart device is turned off.")
     }
 }

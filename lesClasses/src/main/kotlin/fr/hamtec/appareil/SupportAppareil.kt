@@ -1,9 +1,9 @@
 package fr.hamtec.appareil
 
 fun lanceAppareil(){
-    val smartTvDevice = SmartDevice()
-    println("Device name is: ${smartTvDevice.name}")
-    smartTvDevice.turnOn()
-    smartTvDevice.turnOff()
-    println(smartTvDevice)
+    var smartDevice: SmartDevice = SmartTvDevice("Android TV", "Entertainment")
+    smartDevice.turnOn()
+
+    smartDevice = SmartLightDevice("Google Light", "Utility")
+    smartDevice.turnOn()
 }
