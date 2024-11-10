@@ -1,13 +1,10 @@
 package fr.hamtec
 
-import fr.hamtec.chapitre_2_2.utiliserObject
+import fr.hamtec.appareil.lanceAppareil
 
 fun main() {
-    heart()
-    utiliserObject()
+    lanceAppareil()
 }
-
-
 
 private fun heart() {
     println()
