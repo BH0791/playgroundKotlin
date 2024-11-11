@@ -2,7 +2,7 @@
 
 J'apprends le langage de programmation Kotlin *Ce n'est pas un cours!*, je veux plus tard utilliser JetPack Compose pour des applications Android<br>
 
-*Java: JDK-22.0.2*<br>Zulu22.32+15-CA<br>*Kotlin: 2.0.10*<br>*Gradle-8.9*<br>*Android Studio Koala Feature Drop | 2024.1.2 Beta||ou||IntelliJ IDEA 2024.2 (Community Edition)*<br>*pluging: Better Highlights*
+*Java: JDK-23.0.1*<br>Azul Zulu 23.30.13-CA<br>GraalVm-jdk-23.37.1<br>*Kotlin: 2.0.21*<br>*Gradle-8.10*<br>*Android Studio ladybug Feature Drop | 2024.2.2 Canary 9 ||ou||IntelliJ IDEA 2024 (Community Edition)*<br>*pluging: Better Highlights*
 
 >C’est dans la vie quotidienne qu’il faut d’abord montrer qu’on sait quelque chose. En lisant des livres, bien sûr, on arrive toujours à acquérir des connaissances, et même à devenir très érudit. Le vrai savoir, c’est d’être capable de se maîtriser, de se libérer de ses faiblesses, de ne plus être éternellement la proie de tiraillements intérieurs.
 > >*Omraam Mikhaël Aïvanhov*
