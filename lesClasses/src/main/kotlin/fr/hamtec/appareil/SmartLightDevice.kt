@@ -1,5 +1,8 @@
 package fr.hamtec.appareil
 
+/**
+ * Appareil à lumière intelligente
+ */
 class SmartLightDevice(
     deviceName: String,
     deviceCategory: String
@@ -8,7 +11,7 @@ class SmartLightDevice(
             name = deviceName,
             category = deviceCategory
     ) {
-
+    //-- niveau de luminosité
     var brightnessLevel = 0
         set(value) {
             if(value in 0..100) {

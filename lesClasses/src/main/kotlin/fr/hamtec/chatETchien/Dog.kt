@@ -1,20 +1,16 @@
-package fr.hamtec.chapitre_2_2
+package fr.hamtec.chatETchien
 
-class Dog {
-    //-- Arguments
-    var name = ""
-    var age = 0
-        get() = field
-        set(value) {
-            if (value > 0){
-                field = value
-            }
-        }
-    var race = ""
-    var color = ""
-    var weight = 0f
-    var position = 't'
+import kotlin.math.abs
 
+class Dog constructor(
+        var name: String,
+        var age: Int,
+        var race: String,
+        var color: String,
+        var size: Int,
+        var weight: Float,
+        var position: Char = 't'
+) {
     //-- Méthodes
 
     fun isSitting(): Boolean = position == 's'
@@ -32,8 +28,8 @@ class Dog {
         return "Dog(" +
                 "\n\tname = $name " +
                 "\n\tage = $age " +
-                "\n\trace = $race _ " +
-                "\n\tcolor = $color _ " +
+                "\n\trace = $race " +
+                "\n\tcolor = $color " +
                 "\n\tweight = $weight " +
                 "\n\tposition = $position" +
                 "\n)"

@@ -5,4 +5,7 @@ class Point(
     val y: Int
 ) {
 
+    override fun toString(): String {
+        return "Point(x=$x, y=$y)"
+    }
 }

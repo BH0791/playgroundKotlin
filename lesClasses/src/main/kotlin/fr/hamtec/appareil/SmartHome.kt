@@ -5,10 +5,11 @@ class SmartHome(
     val smartTvDevice: SmartTvDevice,
     val smartLightDevice: SmartLightDevice
 ) {
+    //--allumer la télévision
     fun turnOnTv() {
         smartTvDevice.turnOn()
     }
-
+    //--éteindre la télévision
     fun turnOffTv() {
         smartTvDevice.turnOff()
     }

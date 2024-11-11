@@ -1,5 +1,8 @@
 package fr.hamtec.appareil
 
+/**
+ * Télévision intelligente
+ */
 class SmartTvDevice(
     deviceName: String,
     deviceCategory: String
@@ -7,12 +10,14 @@ class SmartTvDevice(
         name = deviceName,
         category = deviceCategory
 ) {
+    //-- Permet d'avoir le contrôle du paramètre
     var speakerVolume = 2
         set(value) {
             if(value in 0..100) {
                 field = value
             }
         }
+    //-- Permet d'avoir le contrôle du paramètre
     var channelNumber = 1
         set(value) {
             if(value in 0..200) {

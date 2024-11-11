@@ -1,9 +1,9 @@
 package fr.hamtec
 
-import fr.hamtec.appareil.lanceAppareil
+import fr.hamtec.geometrie.testGeometrie
 
 fun main() {
-    lanceAppareil()
+    testGeometrie()
 }
 
 private fun heart() {
