@@ -3,14 +3,23 @@ package fr.hamtec.chatETchien
 import kotlin.math.abs
 
 class Dog constructor(
-        var name: String,
-        var age: Int,
-        var race: String,
-        var color: String,
-        var size: Int,
-        var weight: Float,
-        var position: Char = 't'
+    var name: String,
+    var age: Int,
+    var race: String,
+    var color: String,
+    var size: Int,
+    var weight: Float,
+    var position: Char = 't'
 ) {
+    //--Contrôle de l'age
+    init {
+        if(age in 0..100){
+            age = age
+        } else{
+            age = 55
+        }
+    }
+
     //-- Méthodes
 
     fun isSitting(): Boolean = position == 's'

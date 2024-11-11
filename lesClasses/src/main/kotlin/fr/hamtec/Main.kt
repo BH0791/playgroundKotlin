@@ -1,9 +1,10 @@
 package fr.hamtec
 
 import fr.hamtec.appareil.lanceAppareil
+import fr.hamtec.chatETchien.utiliserObject
 
 fun main() {
-    lanceAppareil()
+    utiliserObject()
 }
 
 private fun heart() {
