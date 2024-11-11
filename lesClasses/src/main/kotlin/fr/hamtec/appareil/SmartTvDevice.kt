@@ -41,11 +41,19 @@ class SmartTvDevice(
         channelNumber++
         println("Le nombre de canaux est passé à $channelNumber.")
     }
+
+    /**
+     *  ** allumer
+     */
     override fun turnOn() {
         super.turnOn()
         println("$name est activé. Le volume du haut-parleur est réglé sur $speakerVolume et le numéro de canal est réglé sur $channelNumber."
         )
     }
+
+    /**
+     * ** éteindre
+     */
     override fun turnOff() {
         super.turnOff()
         println("$name éteint")
