@@ -2,8 +2,8 @@ package fr.hamtec.appareil
 
 // La classe SmartHome HAS-A est un dispositif de télévision intelligente.
 class SmartHome(
-    val smartTvDevice: SmartTvDevice,
-    val smartLightDevice: SmartLightDevice
+    val smartTvDevice: SmartTvDevice,       //--Dispositif de télévision intelligente
+    val smartLightDevice: SmartLightDevice  //--Dispositif lumineux intelligent
 ) {
     //--allumer la télévision
     fun turnOnTv() {
