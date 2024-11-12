@@ -8,21 +8,6 @@ dessous de cette propriété afin de modifier le comportement de son getter et d
 Le mot-clé field quant à lui fait référence à la propriété elle-même (sans passer par son getter ou setter, pour éviter
 bien sûr de boucler à l'infini !) : on appelle d'ailleurs cela le "Backing Field".
 
-Backing fields ==> Champs de sauvegarde<br>
-En Kotlin, un champ n'est utilisé qu'en tant que partie d'une propriété pour conserver sa valeur en mémoire. Les champs
-ne peuvent pas être déclarés directement. Cependant, lorsqu'une propriété a besoin d'un champ d'appui, Kotlin le fournit
-automatiquement. Ce champ d'appui peut être référencé dans les accesseurs à l'aide de l'identifiant du champ :
-
-````
-var counter = 0 // the initializer assigns the backing field directly
-    set(value) {
-        if (value >= 0)
-            field = value
-            // counter = value // ERROR StackOverflow: Using actual name 'counter' would make setter recursive
-    }
-
-````
-
 ````
 class User(
     email: String,
@@ -40,4 +25,20 @@ class User(
         }
 }
 
-```
+````
+
+### Backing fields ==> Champs de sauvegarde
+
+En Kotlin, un champ n'est utilisé qu'en tant que partie d'une propriété pour conserver sa valeur en mémoire. Les champs
+ne peuvent pas être déclarés directement. Cependant, lorsqu'une propriété a besoin d'un champ d'appui, Kotlin le fournit
+automatiquement. Ce champ d'appui peut être référencé dans les accesseurs à l'aide de l'identifiant du champ :
+
+````
+var counter = 0 // the initializer assigns the backing field directly
+    set(value) {
+        if (value >= 0)
+            field = value
+            // counter = value // ERROR StackOverflow: Using actual name 'counter' would make setter recursive
+    }
+
+````
