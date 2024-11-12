@@ -1,5 +1,12 @@
 ### Les Getter et Setter
 
+````aiignore
+var <propertyName>[: <PropertyType>] [= <property_initializer>]
+    [<getter>]
+    [<setter>]
+
+````
+
 Afin d’avoir accès au getter et au setter de notre propriété email , il a fallu dans un premier temps retirer le mot-clé
 val devant son nom dans le constructeur de la classe : cela permet à Kotlin de le considérer comme un paramètre, et non
 une propriété. Puis nous avons déclaré la propriété email dans le corps de notre classe User et initialisé celle-ci via

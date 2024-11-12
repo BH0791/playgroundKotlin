@@ -5,13 +5,15 @@ class User(
     var password: String,
     var age: Int
 ) {
+    constructor(email: String) : this(email, "XXXX", 0)
+
     var email: String = email
         get() {
-            println("User is getting their email.");
+            println("get() -L'utilisateur reçoit son courriell: ${field}.")
             return field
         }
         set(value) {
-            println("User is setting their email");
+            println("set() -L'utilisateur configure son e-mail")
             field = value
         }
 }

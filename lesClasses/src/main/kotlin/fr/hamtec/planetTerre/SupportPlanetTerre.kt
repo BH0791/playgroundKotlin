@@ -10,5 +10,9 @@ fun testUser(): Unit {
 
     val user = User("LouisAmstrong@gmail.com", "Amstrong", 54)
     user.email //+ Getter
+    user.email = "newLouisAmstrong@gmail.com"   //+Setter
+
+    val user2 = User("LaurentAmstrong@gmail.com")
+    user2.email
 
 }
