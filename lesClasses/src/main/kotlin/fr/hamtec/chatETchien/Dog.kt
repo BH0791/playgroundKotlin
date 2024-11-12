@@ -2,7 +2,7 @@ package fr.hamtec.chatETchien
 
 import kotlin.math.pow
 
-class Dog(
+class Dog constructor(
     name: String,
     age: Int,
     race: String,
@@ -11,7 +11,8 @@ class Dog(
     weight: Float,
     var position: Char = 't'
 ) : Animal(name, age, race, color, size, weight) {
-    //constructor(name: String) : this(name, 0, "unknown", "unknown", 0, 0f)
+    //- Constructeur secondaire
+    constructor(name: String) : this(name, 0, "unknown", "unknown", 0, 0f)
 
     fun bark(): Unit {
         println("woof")
