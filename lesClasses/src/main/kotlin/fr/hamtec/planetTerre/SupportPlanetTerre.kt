@@ -5,3 +5,10 @@ fun testPlanetTerre(): Unit {
     println(person.getFullName())
     println(person.getFullNameAncienne())
 }
+
+fun testUser(): Unit {
+
+    val user = User("LouisAmstrong@gmail.com", "Amstrong", 54)
+    user.email //+ Getter
+
+}
