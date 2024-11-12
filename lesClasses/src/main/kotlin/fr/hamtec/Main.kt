@@ -1,11 +1,7 @@
 package fr.hamtec
 
-import fr.hamtec.planetTerre.Person
-
 fun main() {
-    val person = Person("Louis", "Amstrong", 10)
-    println(person.getFullName())
-    println(person.getFullNameAncienne())
+
 
 }
 
