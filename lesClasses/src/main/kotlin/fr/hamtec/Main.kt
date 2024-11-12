@@ -1,10 +1,13 @@
 package fr.hamtec
 
-import fr.hamtec.appareil.lanceAppareil
-import fr.hamtec.chatETchien.utiliserObject
+import fr.hamtec.planetTerre.Person
 
 fun main() {
-    utiliserObject()
+    val pers = Person()
+    println(pers.name)
+    pers.name = "Hehe"
+    println(pers.name)
+
 }
 
 private fun heart() {

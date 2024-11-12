@@ -8,6 +8,6 @@ L'instanciation est l'action d'instancier, de créer un objet à partir d'un mod
 de deux opérations : l'allocation et l'initialisation. L'allocation consiste à réserver un espace mémoire au nouvel
 objet. L'initialisation consiste à fixer l'état du nouvel objet. Cette opération fait par exemple appel à l'un des
 constructeurs de la classe de l'objet à créer. La modification de ces opérations permet de réaliser la réflexion
-structurelle.
+structurelle. Par défaut, les classes de Kotlin ne sont pas héritables.
 
 ### Fonctions getter et setter dans les propriétés
