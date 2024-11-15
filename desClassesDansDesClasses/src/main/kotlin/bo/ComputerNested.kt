@@ -1,17 +1,34 @@
 package fr.hamtec.bo
 
-class ComputerNested(val graphicCard: GraphicCard, val hardDisk: HardDisk) {
+class ComputerNested(
+    var nameP: String,
+    val graphicCard: GraphicCard,
+    val hardDisk: HardDisk
+
+) {
+
+
     //+ Classes imbriquées ( nested class )
-    class GraphicCard(val name: String, val model: String){
+    class GraphicCard(val name: String, val model: String) {
         fun displayComputer() {
             println("ComputerNested(graphicCard(name = $name, model $model) ")
         }
     }
+
+    //+
     class HardDisk(val name: String, val size: Int)
 
-    override fun toString(): String {
-        return "ComputerNested(graphicCard=${graphicCard.name}, hardDisk=${hardDisk.name})"
-    }
+    interface InnerInterface
 
+}
 
+//----------------------------------------------------------------
+fun testComputerNested(): Unit {
+    println("\nClasses imbriquées ( nested class )")
+    val graphicCard = ComputerNested.GraphicCard("NVIDIA", "GTX")
+    val hardDisk = ComputerNested.HardDisk("Toshiba", 1024)
+    val computer2 = ComputerNested("Nested", graphicCard, hardDisk)
+
+    graphicCard.displayComputer()
+    println(computer2.toString())
 }

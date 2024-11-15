@@ -1,8 +1,11 @@
 package fr.hamtec
 
-import fr.hamtec.bo.testInner
+import fr.hamtec.bob.testA
 
 
 fun main() {
-    testInner()
+    testA()
 }
+
+
+
