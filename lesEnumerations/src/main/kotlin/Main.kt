@@ -1,8 +1,9 @@
 package fr.hamtec
 
-import fr.hamtec.bimbo.Dog
 import fr.hamtec.bimbo.DogRace
-import fr.hamtec.dement.*
+import fr.hamtec.dement.CardType
+import fr.hamtec.dement.SecondCardType
+import fr.hamtec.dement.thirdCardType
 
 fun main() {
     val color = SecondCardType.SILVER.color
@@ -15,17 +16,18 @@ fun main() {
 
 fun DemoBook(): Unit {
     heart()
-    println("${DogRace.values()[0].number}")
+    println("${DogRace.entries[0].number}")
     println("Group : ${DogRace.Golden_Retriever.group} || Section : ${DogRace.Golden_Retriever.section} || Number : ${DogRace.Golden_Retriever.number}")
 
     println(DogRace.Golden_Retriever)
 
     println(DogRace.German_Shepherd.lifeSpan().last)
 
-    for (valeur in DogRace.German_Shepherd.lifeSpan()){
+    for (valeur in DogRace.German_Shepherd.lifeSpan()) {
         println(valeur)
     }
 }
+
 private fun heart() {
     println()
     println("******************************************************************")
