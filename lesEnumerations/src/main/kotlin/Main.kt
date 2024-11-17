@@ -1,17 +1,9 @@
 package fr.hamtec
 
 import fr.hamtec.bimbo.DogRace
-import fr.hamtec.dement.CardType
-import fr.hamtec.dement.SecondCardType
-import fr.hamtec.dement.thirdCardType
 
 fun main() {
-    val color = SecondCardType.SILVER.color
-    println("$color")
-    val cashbackPercent = thirdCardType.SILVER.calculateCashbackPercent()
-    println("$cashbackPercent")
-    val creditLimit = CardType.PLATINUM.getCreditLimit()
-    println("$creditLimit")
+   
 }
 
 fun DemoBook(): Unit {
