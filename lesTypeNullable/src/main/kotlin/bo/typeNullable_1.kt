@@ -6,9 +6,14 @@ fun testTypeNullable(): Unit {
     if (getRandomNumber() % 2 == 0) {
         dog = Dog("Doggo")
     }
-    if (dog != null) {
-        dog.bark()
+    dog?.bark()
+
+    val dogName = if (dog != null) {
+        dog.name
+    } else {
+        "Defaut name"
     }
+    println("The dog's name is $dogName")
 }
 
 fun getRandomNumber() = (1..100).random()
