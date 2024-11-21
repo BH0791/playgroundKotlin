@@ -1,18 +1,9 @@
 package fr.hamtec
 
-import fr.hamtec.bo.Dog
+import fr.hamtec.bo.testTypeNullable
 
 fun main() {
     println("Hello les Nullable!")
+    testTypeNullable()
+}
 
-    var dog: Dog? = null
-    if (true){
-        dog = Dog("Doggo", "ee")
-        doTatoo(dog.getTatoo())
-    }
-    println(dog)
-}
-fun doTatoo(tatoo: String?){
-    print("méthode : ")
-    println(tatoo)
-}
