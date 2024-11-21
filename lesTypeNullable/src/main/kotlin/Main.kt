@@ -1,9 +1,9 @@
 package fr.hamtec
 
-import fr.hamtec.bo.testTypeNullable
+import fr.hamtec.bo.testOperateurElvis
 
 fun main() {
     println("Hello les Nullable!")
-    testTypeNullable()
+    testOperateurElvis()
 }
 

@@ -8,12 +8,29 @@ fun testTypeNullable(): Unit {
     }
     dog?.bark()
 
-    val dogName = if (dog != null) {
-        dog.name
-    } else {
-        "Defaut name"
-    }
+    val dogName = dog?.name ?: "Defaut name"
+
     println("The dog's name is $dogName")
+}
+
+fun `testOpe!!et?`(): Unit {
+    var favoriteActor: String? = "Sandra Oh"
+
+    val lengthOfName = if (favoriteActor != null) {
+        favoriteActor.length
+    } else {
+        0
+    }
+
+    println("The number of characters in your favorite actor's name is $lengthOfName.")
+}
+
+fun testOperateurElvis(): Unit {
+    val favoriteActor: String? = "Sandra Oh"
+
+    val lengthOfName = favoriteActor?.length ?: 0
+
+    println("The number of characters in your favorite actor's name is $lengthOfName.")
 }
 
 fun getRandomNumber() = (1..100).random()
