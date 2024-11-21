@@ -1,3 +1,7 @@
 package fr.hamtec.bo
 
-data class Dog(var name: String)
+data class Dog(val name: String) {
+    fun bark() {
+        println("Waf! Waf!")
+    }
+}
