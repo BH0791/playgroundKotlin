@@ -1,4 +1,4 @@
-package fr.hamtec
+package fr.hamtec.book
 
 fun main() {
     lanceDemo()
@@ -21,7 +21,7 @@ fun doOperat(a: Int, b: Int, lambda: (a: Int, Int) -> Int) {
 
 fun lanceDemo(): Unit {
     val personne1 = Personn()
-    personne1.getNomCople{
+    personne1.getNomCople {
         println(it)
     }
     dePersonne(personne1, ::recupNom)
@@ -45,8 +45,8 @@ data class Personn(
     val postname: String = "Dupond"
 )
 
-fun Personn.getNomCople(fn: (String)->Unit) {
-    fn ("${this.nom} ${this.postname}")
+fun Personn.getNomCople(fn: (String) -> Unit) {
+    fn("${this.nom} ${this.postname}")
 }
 
 fun recupNom(nom: String): Unit {

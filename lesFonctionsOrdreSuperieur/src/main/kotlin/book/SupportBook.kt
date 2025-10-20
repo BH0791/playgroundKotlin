@@ -1,4 +1,4 @@
-package fr.hamtec
+package fr.hamtec.book
 
 fun appFDP(): Unit {
     //! Exemple d'un livre mais il est pas complet
@@ -44,9 +44,10 @@ fun appFDP(): Unit {
     dePersonne(personne1, { recupererNom(personne1.name) })
 
     val resultat = { a: Int, b: Int -> "ba" }
-    println(resultat(5,8))
+    println(resultat(5, 8))
     println({ a: Int, b: Int -> "ba" })
 }
+
 fun displayTextInLambda(lambda: () -> Unit) {
     println("\nBefor lambda")
     lambda()
@@ -63,7 +64,7 @@ fun caca(a: Int, b: Int): Int {
     return a + b
 }
 
-//? Définition de la méthode que je vais donner a la fonction d'ordre supèrieur
+//? Définition de la méthode que je vais donner à la fonction d'ordre supèrieur
 fun recupererNom(nom: String) {
     println(nom)
 }
