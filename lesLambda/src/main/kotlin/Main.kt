@@ -6,16 +6,21 @@ fun main() {
 //    val lambdaSomme = { a: Int, b: Int -> a + b }
 
     val somme = calculer(100, 5) { a: Int, b: Int -> a + b }
+    val deuxiemeSomme = calculer(a = 200, b = 100, operation = { a: Int, b: Int -> a - b })
     println(somme)
+    println(deuxiemeSomme)
 
-    println(lambdaCalcu(100, 50))
+    executerAction { println("Exécution de l'action maintenant !") }
+
+    traiterChaine("bonjour le monde") { str ->
+        str.uppercase()
+    }
+    traiterChaine(entree = "Hamid") {
+        it.reversed()
+    }
+
 }
 
-fun calcu(a: Int, b: Int): Int {
-    return a - b
-}
-
-var lambdaCalcu: (Int, Int) -> Int = { a, b -> a - b }
 
 /*enum class Operation { ADDITION, SOUSTRACTION }
 
@@ -33,6 +38,22 @@ fun calculer(
     b: Int,
     operation: (Int, Int) -> Int
 ): Int {
-    return operation(a, b)
+    val resultat = operation(a, b)
+    return resultat
 }
 
+fun executerAction(
+    action: () -> Unit
+) {
+    println("Sur le point d'exécuter l'action...")
+    action()
+    println("Action terminée.")
+}
+
+fun traiterChaine(
+    entree: String,
+    processeur: (String) -> String
+) {
+    val resultat = processeur(entree)
+    println("Résultat traité : $resultat")
+}
