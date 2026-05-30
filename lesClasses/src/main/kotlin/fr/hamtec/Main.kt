@@ -2,10 +2,19 @@ package fr.hamtec
 
 import fr.hamtec.classScellee.ResultatReseau
 import fr.hamtec.classScellee.afficherEtat
+import fr.hamtec.classeImbriquee.HeroImbriques
 import fr.hamtec.classeImbriquee.Moteur
 
 fun main() {
-    
+    TesteHeroImbriques()
+}
+
+fun TesteHeroImbriques(): Unit {
+    val hero = HeroImbriques("Ham le Conquérant")
+
+    hero.pick("Épée du Métaverse")
+    hero.pick("Potion de Recomposition")
+    hero.inventory.list()
 }
 
 fun TesteClasseScellees(): Unit {
